@@ -56,6 +56,20 @@
   "sameAs": ["https://www.facebook.com/CooperCraneFL"],
   "areaServed": ["Broward County FL","Miami-Dade County FL","Palm Beach County FL","Lee County FL","Collier County FL","Charlotte County FL"],
   "knowsAbout": ["crane rental","boom truck service","AC unit lifts","roof truss setting","generator lifts","pest control tarp lifts"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Crane and Boom Truck Services",
+    "itemListElement": [
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Crane rental, 2 to 40 ton"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Boom truck rental"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Rooftop AC unit lifts"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Roof truss setting"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Roofing material lifts"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Generator lifts"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Pest-control tarp lifts"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mini spider crane rental"}}
+    ]
+  },
   "contactPoint": [
     {"@type":"ContactPoint","telephone":"+19544456186","contactType":"Southeast yard","email":"Coopercranefl@gmail.com","areaServed":["Broward","Miami-Dade","Palm Beach"]},
     {"@type":"ContactPoint","telephone":"+12392553920","contactType":"Southwest yard","email":"Coopercranefm@gmail.com","areaServed":["Lee","Collier","Charlotte"]}
@@ -316,7 +330,8 @@
   .area-half { padding: 38px 40px; }
   .area-half:first-child { border-right: 1px solid var(--line); }
   .area-half .zone { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.92rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 4px; }
-  .area-half h3 { font-size: 1.85rem; color: var(--ink); margin-bottom: 18px; }
+  .area-half h3 { font-size: 1.85rem; color: var(--ink); margin-bottom: 12px; }
+  .area-half .cities { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.55; margin-bottom: 16px; }
   .area-half .counties { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
   .area-half .county { background: var(--concrete-alt); border-radius: 2px; padding: 6px 13px; font-size: 0.88rem; font-weight: 500; color: var(--ink); }
   .area-half .lines { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
@@ -573,8 +588,8 @@
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <h1>South Florida Crane Service, From a <span class="o">2-Ton Spider</span> to a <span class="o">40-Ton</span> Mobile</h1>
-      <p class="lede">Cooper Crane sets rooftop AC units, trusses, roofing and generators across the Atlantic and Gulf coasts. You point. We lift.</p>
+      <h1>South Florida Crane &amp; Boom Truck Service, From a <span class="o">2-Ton Spider</span> to a <span class="o">40-Ton</span> Mobile Crane</h1>
+      <p class="lede">Cooper Crane's certified operators handle crane and boom truck rentals across South Florida, from rooftop AC units and roof trusses to roofing and generators. You point. We lift.</p>
       <div class="hero-ctas">
         <a href="tel:+19544456186" class="btn"><i class="fa-solid fa-phone-volume"></i> Call SE <small>(954) 445-6186</small></a>
         <a href="tel:+12392553920" class="btn btn-dark"><i class="fa-solid fa-phone-volume"></i> Call SW <small>(239) 255-3920</small></a>
@@ -593,8 +608,8 @@
 <!-- ===== FLEET LADDER (signature) ===== -->
 <section class="fleet" id="fleet">
   <div class="sec-head center">
-    <h2 class="headline">One Phone Call Covers 2 to 40 Tons</h2>
-    <p>Pick the rated capacity your job needs. Every machine below is in active rotation, tagged with the yard that stocks it.</p>
+    <h2 class="headline">Our Crane &amp; Boom Truck Fleet, 2 to 40 Tons</h2>
+    <p>One phone call covers it all. Pick the rated capacity your job needs; every machine below is in active rotation, tagged with the South Florida yard that stocks it.</p>
   </div>
   <div class="ladder">
     <div class="rung">
@@ -629,7 +644,7 @@
   <div class="lift-head">
     <div>
       <h2 class="headline">If It Needs to Go Up, Over or Down, We Lift It</h2>
-      <p class="dek">Most of our days are spent setting the heavy, awkward things that won't fit through a door or up a ladder.</p>
+      <p class="dek">The crane and boom truck services we handle most across South Florida, from AC-unit lifts and roof trusses to roofing and generator sets. The heavy, awkward things that won't fit through a door or up a ladder.</p>
     </div>
     <a href="#contact" class="btn"><i class="fa-solid fa-clipboard-check"></i> Tell Us Your Lift</a>
   </div>
@@ -651,7 +666,7 @@
     </div>
     <div class="why-text">
       <h2 class="headline">Local Iron, Certified Hands</h2>
-      <p>Cooper Crane is a <strong>two-yard South Florida operation</strong>, not a national call center. The same people who answer the phone run the machines, so the crew that shows up already knows your job.</p>
+      <p>Cooper Crane is a <strong>two-yard South Florida crane and boom truck rental operation</strong>, not a national call center. The same people who answer the phone run the machines, so the crew that shows up already knows your job.</p>
       <ul class="why-points">
         <li><span class="ico"><i class="fa-solid fa-helmet-safety"></i></span><div><b>Certified, experienced operators</b><span>Every lift is rigged, signaled and run by a trained operator who respects your site and crew.</span></div></li>
         <li><span class="ico"><i class="fa-solid fa-location-crosshairs"></i></span><div><b>Two yards, six counties</b><span>Machines staged on both coasts means a shorter drive and faster scheduling.</span></div></li>
@@ -665,13 +680,14 @@
 <!-- ===== SERVICE AREA ===== -->
 <section class="area" id="area">
   <div class="sec-head center">
-    <h2 class="headline">Pick the Yard Nearest Your Job</h2>
-    <p>Two yards mean a machine is never far from your site. Call the coast you are on.</p>
+    <h2 class="headline">Crane Service Across Six South Florida Counties</h2>
+    <p>Two yards keep a machine close to your job, on both the Atlantic and Gulf coasts. Pick the yard nearest you.</p>
   </div>
   <div class="area-panel">
     <div class="area-half">
       <span class="zone">Southeast Yard &middot; Atlantic Coast</span>
       <h3>Broward to Palm Beach</h3>
+      <p class="cities">Crane and boom truck service in Fort Lauderdale, Hollywood, Pembroke Pines, Miami, West Palm Beach and nearby.</p>
       <div class="counties"><span class="county">Broward</span><span class="county">Miami-Dade</span><span class="county">Palm Beach</span></div>
       <div class="lines">
         <a href="tel:+19544456186" class="area-link"><i class="fa-solid fa-phone-volume"></i> (954) 445-6186</a>
@@ -682,6 +698,7 @@
     <div class="area-half">
       <span class="zone">Southwest Yard &middot; Gulf Coast</span>
       <h3>Fort Myers to Charlotte</h3>
+      <p class="cities">Crane and boom truck service in Fort Myers, Cape Coral, Naples, Bonita Springs, Port Charlotte and nearby.</p>
       <div class="counties"><span class="county">Lee</span><span class="county">Collier</span><span class="county">Charlotte</span></div>
       <div class="lines">
         <a href="tel:+12392553920" class="area-link"><i class="fa-solid fa-phone-volume"></i> (239) 255-3920</a>
@@ -938,32 +955,4 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
     let firstBad = null;
     const checks = [['cf-name', !name], ['cf-phone', !phone], ['cf-email', !email || !emailOk], ['cf-loc', !loc]];
     checks.forEach(([id, bad]) => {
-      const group = document.getElementById(id).closest('.form-group');
-      setInvalid(group, bad);
-      if (bad && !firstBad) firstBad = document.getElementById(id);
-    });
-    if (firstBad) { firstBad.focus(); return; }
-    const to = loc.indexOf('Southwest') === 0 ? 'Coopercranefm@gmail.com' : 'Coopercranefl@gmail.com';
-    const subject = encodeURIComponent('Crane quote request: ' + name);
-    const body = encodeURIComponent('Name/business: ' + name + '\nPhone: ' + phone + '\nEmail: ' + email + '\nClosest yard: ' + loc + '\n\nWhat needs lifting:\n' + (msg || '(not provided)'));
-    window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
-    status.className = 'form-status show success';
-    status.innerHTML = "Thanks. Your email just opened with the details filled in. If nothing happened, call us at <a href='tel:+19544456186' style='color:var(--orange-hot);font-weight:600;'>(954) 445-6186</a>.";
-  });
-
-  // ===== Reviews carousel =====
-  (function () {
-    const track = document.getElementById('revTrack');
-    if (!track) return;
-    const prev = document.getElementById('revPrev');
-    const next = document.getElementById('revNext');
-    function step() { const c = track.querySelector('.rev-card'); return c ? c.getBoundingClientRect().width + 20 : 320; }
-    if (prev) prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
-    if (next) next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
-  })();
-})();
-</script>
-
-</body>
-</html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+      const group = d

@@ -955,4 +955,31 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
     let firstBad = null;
     const checks = [['cf-name', !name], ['cf-phone', !phone], ['cf-email', !email || !emailOk], ['cf-loc', !loc]];
     checks.forEach(([id, bad]) => {
-      const group = d
+      const group = document.getElementById(id).closest('.form-group');
+      setInvalid(group, bad);
+      if (bad && !firstBad) firstBad = document.getElementById(id);
+    });
+    if (firstBad) { firstBad.focus(); return; }
+    const to = loc.indexOf('Southwest') === 0 ? 'Coopercranefm@gmail.com' : 'Coopercranefl@gmail.com';
+    const subject = encodeURIComponent('Crane quote request: ' + name);
+    const body = encodeURIComponent('Name/business: ' + name + '\nPhone: ' + phone + '\nEmail: ' + email + '\nClosest yard: ' + loc + '\n\nWhat needs lifting:\n' + (msg || '(not provided)'));
+    window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+    status.className = 'form-status show success';
+    status.innerHTML = "Thanks. Your email just opened with the details filled in. If nothing happened, call us at <a href='tel:+19544456186' style='color:var(--orange-hot);font-weight:600;'>(954) 445-6186</a>.";
+  });
+
+  // ===== Reviews carousel =====
+  (function () {
+    const track = document.getElementById('revTrack');
+    if (!track) return;
+    const prev = document.getElementById('revPrev');
+    const next = document.getElementById('revNext');
+    function step() { const c = track.querySelector('.rev-card'); return c ? c.getBoundingClientRect().width + 20 : 320; }
+    if (prev) prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    if (next) next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  })();
+})();
+</script>
+
+</body>
+</html>

@@ -75,6 +75,7 @@
   "paymentAccepted": "Cash, Credit Card, Cash App, Zelle",
   "currenciesAccepted": "USD",
   "address": {"@type":"PostalAddress","addressLocality":"West Park","addressRegion":"FL","postalCode":"33023","addressCountry":"US"},
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.0","reviewCount":"20"},
   "areaServed": [
     {"@type":"AdministrativeArea","name":"Broward County"},
     {"@type":"AdministrativeArea","name":"Miami-Dade County"},
@@ -329,13 +330,25 @@
 
   /* ===== PROOF (single wide pull-quote) ===== */
   .proof { background: var(--steel); color: var(--bone); }
-  .proof-inner { max-width: 980px; margin: 0 auto; text-align: center; }
-  .proof .qmark { color: var(--orange); font-size: 3rem; margin-bottom: 18px; }
-  .proof blockquote { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: clamp(1.8rem, 3.6vw, 2.9rem); line-height: 1.16; color: var(--bone); letter-spacing: 0.01em; margin-bottom: 26px; text-transform: none; }
-  .proof cite { font-style: normal; display: block; }
-  .proof cite b { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--bone); font-size: 1.15rem; letter-spacing: 0.04em; display: block; }
-  .proof cite span { font-size: 0.92rem; color: var(--bone-mute); }
-  .proof-note { margin-top: 26px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); border: 1px dashed rgba(194,93,28,0.5); border-radius: 2px; padding: 6px 12px; display: inline-block; }
+  .reviews-inner { max-width: 1180px; margin: 0 auto; }
+  .reviews-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 26px; flex-wrap: wrap; margin-bottom: 38px; }
+  .reviews-head .headline { color: var(--bone); }
+  .rating-badge { display: flex; align-items: center; gap: 14px; margin-top: 16px; }
+  .rating-badge .num { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 2.7rem; color: var(--bone); line-height: 0.9; }
+  .rating-badge .stars { color: var(--orange); font-size: 1.02rem; letter-spacing: 2px; }
+  .rating-badge .meta { font-size: 0.9rem; color: var(--bone-mute); display: block; margin-top: 5px; }
+  .rev-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; padding-bottom: 4px; }
+  .rev-track::-webkit-scrollbar { display: none; }
+  .rev-card { flex: 0 0 calc((100% - 20px) / 2); scroll-snap-align: start; background: var(--steel-2); border: 1px solid var(--line-dark); border-radius: 12px; padding: 30px 28px; display: flex; flex-direction: column; }
+  .rev-card .stars { color: var(--orange); font-size: 0.92rem; letter-spacing: 1px; margin-bottom: 14px; }
+  .rev-card blockquote { font-size: 1.04rem; line-height: 1.6; color: var(--bone); margin-bottom: 20px; font-weight: 400; flex: 1; }
+  .rev-card .who { display: flex; align-items: center; gap: 13px; padding-top: 17px; border-top: 1px solid var(--line-dark); }
+  .rev-card .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--orange); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.25rem; flex-shrink: 0; }
+  .rev-card .who b { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--bone); display: block; letter-spacing: 0.02em; line-height: 1.1; }
+  .rev-card .who span { font-size: 0.8rem; color: var(--bone-mute); }
+  .rev-nav { display: flex; gap: 12px; justify-content: center; margin-top: 30px; }
+  .rev-nav button { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--line-dark); background: transparent; color: var(--bone); cursor: pointer; font-size: 1rem; display: inline-flex; align-items: center; justify-content: center; transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
+  .rev-nav button:hover { background: var(--orange); border-color: var(--orange); color: #fff; }
 
   /* ===== FAQ ===== */
   .faq-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 0.4fr 0.6fr; gap: 54px; align-items: start; }
@@ -444,16 +457,20 @@
     .cred:first-child { border-top: none; }
 
     .ladder { gap: 12px; }
-    .rung { grid-template-columns: auto 1fr; gap: 8px 16px; padding: 16px 18px; }
-    .rung-id { align-self: center; }
-    .rung-id .tons { font-size: 2.3rem; }
-    .rung-bar { grid-column: 2; height: 22px; }
-    .rung-tag { grid-column: 2; justify-self: start; margin-top: 2px; }
+    .rung { display: block; padding: 18px 18px; }
+    .rung-id { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
+    .rung-id .tons { font-size: 2.1rem; min-width: 50px; }
+    .rung-id .name { margin-top: 0; }
+    .rung-bar { width: 100%; height: 26px; margin-bottom: 10px; }
+    .rung-tag { display: inline-flex; }
     .fleet-foot { padding: 22px; }
     .fleet-foot .btn { width: 100%; }
 
-    .lift-grid { grid-template-columns: 1fr; }
-    .lift-card { padding: 22px 22px; }
+    .lift-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .lift-card { flex-direction: column; gap: 12px; padding: 18px 16px; }
+    .lift-card .ico { width: 46px; height: 46px; font-size: 1.25rem; }
+    .lift-card h3 { font-size: 1.18rem; }
+    .lift-card p { display: none; }
 
     .why-points b { font-size: 1.12rem; }
 
@@ -461,7 +478,9 @@
     .area-half { padding: 28px 24px; }
     .area-half:first-child { border-right: none; border-bottom: 1px solid var(--line); }
 
-    .proof blockquote { font-size: 1.5rem; }
+    .reviews-head { display: block; }
+    .reviews-head .btn { margin-top: 18px; }
+    .rev-card { flex: 0 0 86%; padding: 24px 22px; }
 
     .contact-card { padding: 26px 22px; }
     .contact-card .headline { font-size: 1.8rem; }
@@ -659,11 +678,41 @@
 
 <!-- ===== PROOF ===== -->
 <section class="proof" id="proof">
-  <div class="proof-inner">
-    <i class="fa-solid fa-quote-left qmark"></i>
-    <blockquote>Add a real Cooper Crane review here, ideally about a tricky lift the crew made look easy. Pull the best one from Facebook or ask a repeat contractor for a line.</blockquote>
-    <cite><b>[ Customer Name ]</b><span>[ Job type, City ]</span></cite>
-    <div class="proof-note">Placeholder &middot; swap in a real customer quote before launch</div>
+  <div class="reviews-inner">
+    <div class="reviews-head">
+      <div>
+        <h2 class="headline">What South Florida Says</h2>
+        <div class="rating-badge">
+          <span class="num">4.0</span>
+          <div>
+            <span class="stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+            <span class="meta">Rated on Google &middot; 20 reviews</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://www.google.com/maps?cid=972231914882425130" target="_blank" rel="noopener" class="btn"><i class="fa-brands fa-google"></i> Read Reviews on Google</a>
+    </div>
+    <div class="rev-track" id="revTrack">
+      <article class="rev-card">
+        <span class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+        <blockquote>Best crane service company in Florida! I've been using Cooper Crane services for over 10+ years and all my jobs have gone flawless with them! Service is professional, excellent people to work with like Shannon from the office and Mika the crane operator you cant go wrong! A strong recommendation to get the job done professionally.</blockquote>
+        <div class="who"><span class="avatar">IR</span><div><b>Infinite Refrigeration LLC</b><span>Google review &middot; 1 year ago</span></div></div>
+      </article>
+      <article class="rev-card">
+        <span class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+        <blockquote>100% Recommend. Had an emergency with a machine and they showed up in 30 minutes. Thank you!!!</blockquote>
+        <div class="who"><span class="avatar">JR</span><div><b>Jesus Rivas</b><span>Local Guide on Google &middot; 7 months ago</span></div></div>
+      </article>
+      <article class="rev-card">
+        <span class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+        <blockquote>Great people. Straight forward. Honest pricing.</blockquote>
+        <div class="who"><span class="avatar">MT</span><div><b>M T</b><span>Google review &middot; 7 months ago</span></div></div>
+      </article>
+    </div>
+    <div class="rev-nav">
+      <button id="revPrev" type="button" aria-label="Previous reviews"><i class="fa-solid fa-chevron-left"></i></button>
+      <button id="revNext" type="button" aria-label="Next reviews"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
   </div>
 </section>
 
@@ -885,9 +934,20 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
     status.className = 'form-status show success';
     status.innerHTML = "Thanks. Your email just opened with the details filled in. If nothing happened, call us at <a href='tel:+19544456186' style='color:var(--orange-hot);font-weight:600;'>(954) 445-6186</a>.";
   });
+
+  // ===== Reviews carousel =====
+  (function () {
+    const track = document.getElementById('revTrack');
+    if (!track) return;
+    const prev = document.getElementById('revPrev');
+    const next = document.getElementById('revNext');
+    function step() { const c = track.querySelector('.rev-card'); return c ? c.getBoundingClientRect().width + 20 : 320; }
+    if (prev) prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    if (next) next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  })();
 })();
 </script>
 
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

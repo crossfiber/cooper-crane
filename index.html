@@ -248,16 +248,15 @@
 
   /* credentials rail, continuous on the hero steel (no bright band, no overlap) */
   .cred-rail { position: relative; z-index: 2; border-top: 1px solid var(--line-dark); }
-  .cred-rail-inner { max-width: 1220px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
-  .cred { display: flex; align-items: center; gap: 14px; padding: 22px 28px; border-left: 1px solid var(--line-dark); }
-  .cred:first-child { border-left: none; padding-left: 0; }
-  .cred i { color: var(--orange); font-size: 1.5rem; flex-shrink: 0; }
+  .cred-rail-inner { max-width: 1220px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 14px 52px; padding: 24px 0; }
+  .cred { display: flex; align-items: center; gap: 13px; }
+  .cred i { color: var(--orange); font-size: 1.45rem; flex-shrink: 0; }
   .cred b { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.18rem; color: var(--bone); display: block; letter-spacing: 0.02em; line-height: 1; }
   .cred span { font-size: 0.86rem; color: var(--bone-mute); }
 
   /* ===== SECTION SHELL ===== */
   section { padding: 100px 30px; }
-  @media (max-width: 768px) { section { padding: 64px 20px; } }
+  @media (max-width: 768px) { section { padding: 52px 20px; } }
   section.alt { background: var(--concrete-alt); }
   section.dark { background: var(--steel); color: var(--bone); }
   .sec-head { max-width: 760px; margin-bottom: 46px; }
@@ -448,13 +447,14 @@
     .hero-content { padding-bottom: 40px; }
     .hero h1 { font-size: 2.55rem; }
     .hero p.lede { font-size: 1.04rem; margin-bottom: 26px; }
-    .hero-ctas { gap: 10px; }
-    .hero-ctas .btn { width: 100%; padding: 15px 18px; }
+    .hero-ctas { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .hero-ctas .btn { width: 100%; flex-wrap: wrap; column-gap: 8px; row-gap: 1px; padding: 11px 8px; }
+    .hero-ctas .btn small { flex-basis: 100%; text-align: center; margin-left: 0; font-size: 0.74rem; }
 
-    /* credentials rail stacks to a tidy 1-col list, not 3 cramped columns */
-    .cred-rail-inner { grid-template-columns: 1fr; }
-    .cred { border-left: none; border-top: 1px solid var(--line-dark); padding: 16px 0; }
-    .cred:first-child { border-top: none; }
+    /* credentials rail: clean stacked list, no divider lines */
+    .cred-rail-inner { flex-direction: column; gap: 0; padding: 10px 0 6px; }
+    .cred { padding: 11px 0; gap: 12px; }
+    .cred i { font-size: 1.3rem; }
 
     .ladder { gap: 12px; }
     .rung { display: block; padding: 18px 18px; }
@@ -482,12 +482,31 @@
     .reviews-head .btn { margin-top: 18px; }
     .rev-card { flex: 0 0 86%; padding: 24px 22px; }
 
-    .contact-card { padding: 26px 22px; }
-    .contact-card .headline { font-size: 1.8rem; }
-    .form-row { grid-template-columns: 1fr; }
+    /* FAQ condensed */
+    .faq-intro p, .faq-intro .btn { display: none; }
+    .faq-intro .headline { margin-bottom: 0; }
+    .accordion { gap: 8px; }
+    .acc-header { padding: 15px 18px; font-size: 1.05rem; }
+    .acc-item.open .acc-content { max-height: 460px; }
 
-    .footer-inner { grid-template-columns: 1fr; gap: 26px; margin-bottom: 26px; }
-    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 14px; }
+    /* Contact condensed */
+    .contact-inner { gap: 20px; }
+    .contact-card { padding: 24px 20px; }
+    .contact-card .headline { font-size: 1.8rem; }
+    .contact-card .lede { font-size: 0.94rem; margin-bottom: 16px; }
+    .contact-form { gap: 12px; }
+    .form-row { grid-template-columns: 1fr; }
+    .form-group textarea { min-height: 78px; }
+    .contact-side { gap: 12px; }
+    .yard-tile { padding: 16px 18px; }
+    .yard-tile h3 { font-size: 1.25rem; }
+
+    /* Footer condensed: brand full width, link cols paired */
+    footer { padding: 42px 20px 22px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 22px 20px; margin-bottom: 22px; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-brand p { margin-bottom: 12px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
   }
 
   @media (max-width: 420px) {
@@ -950,4 +969,4 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
 
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

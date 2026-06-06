@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Cooper Crane LLC | South Florida Crane & Boom Truck Service · v1.0 -->
+<!-- Cooper Crane LLC | South Florida Crane & Boom Truck Service · v2.0 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -36,10 +36,10 @@
 
 <link rel="icon" type="image/png" href="assets/cross-designs.png">
 
-<!-- Fonts: Oswald (headlines), Barlow (body) -->
+<!-- Fonts: Barlow Condensed (headlines), Barlow (body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Font Awesome 6 -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -128,506 +128,302 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --concrete: #F4F2EE;       /* page bg, warm concrete */
-    --concrete-alt: #E9E4DC;   /* alt-section bg */
-    --steel: #1E1916;          /* dark warm charcoal derived from brand red */
-    --steel-deep: #161210;     /* footer */
-    --red: #C41E2A;            /* brand crane red. CTA / action only */
-    --red-hot: #A4141F;        /* CTA hover */
-    --ink: #1A1614;            /* text on light */
-    --ink-soft: rgba(26,22,20,0.72);
-    --bone: #F4EFE8;           /* text on dark */
-    --bone-mute: rgba(244,239,232,0.70);
-    --line: rgba(26,22,20,0.14);
-    --line-dark: rgba(244,239,232,0.14);
-    --shadow-sm: 0 1px 2px rgba(26,22,20,0.06), 0 6px 18px rgba(26,22,20,0.08);
-    --shadow-md: 0 10px 26px rgba(26,22,20,0.12), 0 24px 60px rgba(26,22,20,0.12);
-    --nav-h: 78px;
-    --nav-h-sm: 62px;
+    --concrete: #F5F1EA;        /* warm concrete page bg */
+    --concrete-alt: #ECE4D6;    /* alt-section bg */
+    --steel: #211B14;           /* warm dark brown-charcoal (derived from orange) */
+    --steel-2: #2C241B;         /* raised surface on steel */
+    --steel-deep: #18130D;      /* footer */
+    --orange: #C25D1C;          /* burnt construction orange. action only */
+    --orange-hot: #9F4912;      /* hover */
+    --orange-soft: rgba(194,93,28,0.14);
+    --ink: #1C1813;             /* text on light */
+    --ink-soft: rgba(28,24,19,0.70);
+    --bone: #F5EFE6;            /* text on dark */
+    --bone-mute: rgba(245,239,230,0.68);
+    --line: rgba(28,24,19,0.13);
+    --line-dark: rgba(245,239,230,0.13);
+    --shadow-sm: 0 1px 2px rgba(28,24,19,0.05), 0 8px 22px rgba(28,24,19,0.08);
+    --shadow-md: 0 12px 30px rgba(28,24,19,0.13), 0 28px 60px rgba(28,24,19,0.12);
+    --nav-h: 76px;
+    --nav-h-sm: 60px;
   }
 
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--nav-h) + 20px);
-  }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 20px); }
   @media (max-width: 768px) { html { scroll-padding-top: calc(var(--nav-h-sm) + 16px); } }
 
   body {
     font-family: 'Barlow', system-ui, sans-serif;
-    color: var(--ink);
-    background: var(--concrete);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+    color: var(--ink); background: var(--concrete);
+    line-height: 1.6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
-
   h1, h2, h3, h4 {
-    font-family: 'Oswald', system-ui, sans-serif;
-    font-weight: 700;
-    line-height: 1.08;
-    text-transform: uppercase;
-    letter-spacing: 0.005em;
+    font-family: 'Barlow Condensed', system-ui, sans-serif;
+    font-weight: 700; line-height: 1.02; text-transform: uppercase; letter-spacing: 0.01em;
   }
   a { color: inherit; }
   img { max-width: 100%; display: block; }
-
-  .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+  .container { max-width: 1220px; margin: 0 auto; padding: 0 26px; }
   @media (max-width: 768px) { .container { padding: 0 20px; } }
 
   /* ===== Buttons ===== */
   .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    padding: 14px 26px;
-    background: var(--red);
-    color: #fff !important;
-    border: none; border-radius: 3px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600; font-size: 0.98rem;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    text-decoration: none; cursor: pointer;
+    padding: 14px 26px; background: var(--orange); color: #fff !important; border: none; border-radius: 2px;
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1.08rem;
+    letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; cursor: pointer;
     transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 14px rgba(196,30,42,0.30);
+    box-shadow: 0 4px 14px rgba(194,93,28,0.26);
   }
-  .btn:hover { background: var(--red-hot); transform: translateY(-2px); box-shadow: 0 9px 22px rgba(196,30,42,0.40); }
-  .btn-dark {
-    background: var(--steel); color: var(--bone) !important; box-shadow: none;
-  }
-  .btn-dark:hover { background: #2a2320; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.22); }
-  .btn-sm { padding: 10px 18px; font-size: 0.86rem; }
+  .btn:hover { background: var(--orange-hot); transform: translateY(-2px); box-shadow: 0 9px 22px rgba(194,93,28,0.36); }
+  .btn-dark { background: var(--steel-2); color: var(--bone) !important; box-shadow: none; }
+  .btn-dark:hover { background: #38301f; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.24); }
+  .btn-outline { background: transparent; color: var(--ink) !important; border: 2px solid var(--ink); box-shadow: none; }
+  .btn-outline:hover { background: var(--ink); color: var(--concrete) !important; transform: translateY(-2px); }
+  .btn-sm { padding: 10px 18px; font-size: 0.95rem; }
 
-  /* ===== NAV (solid from load) ===== */
+  /* ===== NAV (solid from load, right-clustered links) ===== */
   nav.site-nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    height: var(--nav-h);
-    display: flex; align-items: center; padding: 0 28px;
-    background: var(--steel);
-    border-bottom: 1px solid rgba(244,239,232,0.10);
-    box-shadow: 0 2px 18px rgba(0,0,0,0.18);
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: var(--nav-h);
+    display: flex; align-items: center; padding: 0 30px;
+    background: var(--steel); border-bottom: 2px solid var(--orange);
   }
-  .nav-inner {
-    width: 100%; max-width: 1300px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between; gap: 24px;
-  }
-  .nav-logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1; gap: 3px; }
-  .nav-logo .wm {
-    font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.32rem;
-    color: var(--bone); letter-spacing: 0.04em; text-transform: uppercase;
-  }
-  .nav-logo .wm b { color: var(--red); font-weight: 700; }
-  .nav-logo .tag {
-    font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 0.58rem;
-    color: var(--bone-mute); letter-spacing: 0.28em; text-transform: uppercase;
-  }
-  .nav-links { display: flex; gap: 30px; list-style: none; }
+  .nav-inner { width: 100%; max-width: 1300px; margin: 0 auto; display: flex; align-items: center; gap: 28px; }
+  .nav-logo { display: flex; align-items: center; gap: 11px; text-decoration: none; margin-right: auto; }
+  .nav-logo .mark { width: 38px; height: 38px; border-radius: 3px; background: var(--orange); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem; flex-shrink: 0; }
+  .nav-logo .wm { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.42rem; color: var(--bone); letter-spacing: 0.03em; text-transform: uppercase; line-height: 0.95; }
+  .nav-logo .tag { display: block; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 0.56rem; color: var(--bone-mute); letter-spacing: 0.24em; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
   .nav-links a {
-    color: var(--bone); text-decoration: none;
-    font-family: 'Oswald', sans-serif; font-weight: 500;
-    font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase;
-    transition: color 0.2s ease;
+    color: var(--bone); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+    font-size: 1.02rem; letter-spacing: 0.07em; text-transform: uppercase; padding: 4px 0; position: relative; transition: color 0.2s ease;
   }
-  .nav-links a:hover { color: var(--red); }
-  .nav-right { display: flex; gap: 14px; align-items: center; }
-  .nav-phone {
-    color: var(--bone); text-decoration: none; font-weight: 600; font-size: 0.92rem;
-    display: inline-flex; align-items: center; gap: 8px; font-family: 'Oswald', sans-serif; letter-spacing: 0.04em;
-  }
-  .nav-phone i { color: var(--red); }
-  .nav-phone:hover { color: var(--red); }
+  .nav-links a::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px; background: var(--orange); transition: width 0.22s ease; }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-right { display: flex; gap: 16px; align-items: center; }
+  .nav-phone { color: var(--bone); text-decoration: none; font-weight: 600; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.03em; }
+  .nav-phone i { color: var(--orange); }
+  .nav-phone:hover { color: var(--orange); }
 
   .mobile-actions { display: none; gap: 10px; align-items: center; }
-  .mobile-call {
-    width: 44px; height: 44px; border-radius: 50%;
-    background: var(--red); color: #fff;
-    display: inline-flex; align-items: center; justify-content: center;
-    text-decoration: none; box-shadow: 0 4px 14px rgba(196,30,42,0.4);
-  }
-  .hamburger {
-    width: 44px; height: 44px; background: transparent;
-    border: 2px solid rgba(244,239,232,0.5); border-radius: 4px; cursor: pointer;
-    display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
-    -webkit-appearance: none; appearance: none; padding: 0;
-  }
+  .mobile-call { width: 44px; height: 44px; border-radius: 50%; background: var(--orange); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 14px rgba(194,93,28,0.4); }
+  .hamburger { width: 44px; height: 44px; background: transparent; border: 2px solid rgba(245,239,230,0.5); border-radius: 4px; cursor: pointer; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; -webkit-appearance: none; appearance: none; padding: 0; }
   .hamburger span { display: block; width: 22px; height: 2.5px; background: var(--bone); border-radius: 2px; }
 
   /* ===== Drawer ===== */
-  .nav-drawer {
-    position: fixed; top: 0; right: 0; width: 350px; max-width: 90vw; height: 100dvh;
-    background: var(--steel); z-index: 1001;
-    transform: translateX(100%); transition: transform 0.32s cubic-bezier(.2,.8,.2,1);
-    display: flex; flex-direction: column; box-shadow: -2px 0 28px rgba(0,0,0,0.4);
-    padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom);
-  }
+  .nav-drawer { position: fixed; top: 0; right: 0; width: 348px; max-width: 90vw; height: 100dvh; background: var(--steel); z-index: 1001; transform: translateX(100%); transition: transform 0.32s cubic-bezier(.2,.8,.2,1); display: flex; flex-direction: column; box-shadow: -2px 0 28px rgba(0,0,0,0.4); padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
   .nav-drawer.open { transform: translateX(0); }
-  .drawer-header {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 16px 20px; border-bottom: 1px solid var(--line-dark);
-  }
-  .drawer-header .wm { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.15rem; color: var(--bone); letter-spacing: 0.04em; }
-  .drawer-header .wm b { color: var(--red); }
+  .drawer-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--line-dark); }
+  .drawer-header .wm { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--bone); letter-spacing: 0.03em; text-transform: uppercase; }
+  .drawer-header .wm b { color: var(--orange); }
   .drawer-close { background: none; border: none; font-size: 1.4rem; color: var(--bone); cursor: pointer; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; }
-  .drawer-close:hover { color: var(--red); }
+  .drawer-close:hover { color: var(--orange); }
   .drawer-links { display: flex; flex-direction: column; flex: 1; overflow-y: auto; min-height: 0; }
-  .drawer-links a {
-    display: block; padding: 15px 22px; text-decoration: none; color: var(--bone);
-    font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 1.16rem;
-    letter-spacing: 0.04em; text-transform: uppercase; border-bottom: 1px solid var(--line-dark);
-    transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
-  }
-  .drawer-links a:hover, .drawer-links a:active { background: #2a2320; color: var(--red); padding-left: 28px; }
-  .drawer-footer {
-    padding: 16px 20px calc(16px + env(safe-area-inset-bottom));
-    border-top: 1px solid var(--line-dark); background: #18130f;
-    display: flex; flex-direction: column; gap: 10px;
-  }
-  .drawer-phone {
-    background: var(--bone); color: var(--ink); text-decoration: none;
-    font-weight: 700; font-size: 0.96rem; border-radius: 3px; padding: 12px 14px;
-    display: inline-flex; align-items: center; gap: 10px; justify-content: center;
-  }
-  .drawer-phone i { color: var(--red); }
-  .drawer-phone small { font-weight: 600; opacity: 0.7; }
+  .drawer-links a { display: block; padding: 15px 22px; text-decoration: none; color: var(--bone); font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1.25rem; letter-spacing: 0.04em; text-transform: uppercase; border-bottom: 1px solid var(--line-dark); transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease; }
+  .drawer-links a:hover, .drawer-links a:active { background: var(--steel-2); color: var(--orange); padding-left: 28px; }
+  .drawer-footer { padding: 16px 20px calc(16px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line-dark); background: var(--steel-deep); display: flex; flex-direction: column; gap: 10px; }
+  .drawer-phone { background: var(--bone); color: var(--ink); text-decoration: none; font-weight: 700; font-size: 0.98rem; border-radius: 2px; padding: 12px 14px; display: inline-flex; align-items: center; gap: 10px; justify-content: center; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.03em; }
+  .drawer-phone i { color: var(--orange); }
+  .drawer-phone small { font-weight: 600; opacity: 0.65; }
   .drawer-cta { width: 100%; }
-  .nav-overlay { position: fixed; inset: 0; background: rgba(10,8,7,0.62); z-index: 1000; display: none; }
+  .nav-overlay { position: fixed; inset: 0; background: rgba(8,6,4,0.62); z-index: 1000; display: none; }
   .nav-overlay.open { display: block; }
   body.drawer-open { overflow: hidden; }
   body.drawer-open .mobile-actions { visibility: hidden; }
 
   /* ===== HERO ===== */
-  .hero {
-    position: relative; color: var(--bone);
-    padding: calc(var(--nav-h) + 56px) 28px 96px;
-    background: var(--steel); overflow: hidden;
-  }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background-image: url('assets/fleet-lineup.jpg');
-    background-size: cover; background-position: center 60%; z-index: 0;
-  }
-  .hero-overlay {
-    position: absolute; inset: 0; z-index: 1;
-    background:
-      linear-gradient(100deg, rgba(22,18,16,0.96) 0%, rgba(22,18,16,0.86) 40%, rgba(22,18,16,0.55) 70%, rgba(22,18,16,0.40) 100%),
-      linear-gradient(0deg, rgba(22,18,16,0.85) 0%, rgba(22,18,16,0) 45%);
-  }
-  .hero-inner { position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; }
-  .hero-content { max-width: 720px; }
-  .hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 9px;
-    font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.82rem;
-    letter-spacing: 0.16em; text-transform: uppercase; color: var(--bone);
-    padding: 7px 14px; border-left: 3px solid var(--red); background: rgba(196,30,42,0.14);
-    margin-bottom: 22px;
-  }
-  .hero h1 {
-    font-size: clamp(2.7rem, 6vw, 5.3rem); color: var(--bone);
-    margin-bottom: 20px; line-height: 1.02; letter-spacing: 0.002em;
-  }
-  .hero h1 .red { color: var(--red); }
-  .hero p.lede {
-    font-size: 1.2rem; line-height: 1.55; color: var(--bone-mute);
-    max-width: 600px; margin-bottom: 30px;
-  }
-  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 34px; }
-  .hero-ctas .btn { padding: 16px 26px; font-size: 1rem; }
-  .hero-ctas .btn small { font-weight: 500; opacity: 0.82; letter-spacing: 0.02em; margin-left: 2px; }
-  .cap-chips { display: flex; flex-wrap: wrap; gap: 10px; }
-  .cap-chips .lbl {
-    flex-basis: 100%; font-family: 'Oswald', sans-serif; font-weight: 500;
-    font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--bone-mute); margin-bottom: 2px;
-  }
-  .cap-chip {
-    display: inline-flex; align-items: baseline; gap: 5px;
-    padding: 8px 15px; border-radius: 2px;
-    background: rgba(244,239,232,0.07); border: 1px solid var(--line-dark);
-    color: var(--bone); font-family: 'Oswald', sans-serif; font-weight: 600;
-    font-size: 1.05rem; letter-spacing: 0.02em;
-  }
-  .cap-chip span { font-family: 'Barlow', sans-serif; font-weight: 500; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bone-mute); }
+  .hero { position: relative; color: var(--bone); background: var(--steel); overflow: hidden; padding: calc(var(--nav-h) + 64px) 30px 0; }
+  .hero-bg { position: absolute; inset: 0; background-image: url('assets/fleet-lineup.jpg'); background-size: cover; background-position: center 62%; z-index: 0; }
+  .hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(95deg, rgba(20,16,11,0.95) 0%, rgba(20,16,11,0.84) 42%, rgba(20,16,11,0.50) 72%, rgba(20,16,11,0.34) 100%), linear-gradient(0deg, rgba(20,16,11,0.92) 0%, rgba(20,16,11,0) 50%); }
+  .hero-inner { position: relative; z-index: 2; max-width: 1220px; margin: 0 auto; }
+  .hero-content { max-width: 740px; padding-bottom: 56px; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.92rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bone); margin-bottom: 20px; }
+  .hero-eyebrow i { color: var(--orange); }
+  .hero h1 { font-size: clamp(2.8rem, 6.2vw, 5.4rem); color: var(--bone); margin-bottom: 20px; line-height: 0.98; letter-spacing: 0.005em; }
+  .hero h1 .o { color: var(--orange); }
+  .hero p.lede { font-size: 1.22rem; line-height: 1.5; color: var(--bone-mute); max-width: 600px; margin-bottom: 30px; }
+  .hero-ctas { display: flex; gap: 13px; flex-wrap: wrap; }
+  .hero-ctas .btn { padding: 16px 26px; }
+  .hero-ctas .btn small { font-weight: 500; opacity: 0.85; letter-spacing: 0.02em; margin-left: 3px; }
 
-  /* ===== CAPACITY BAND (overlaps hero) ===== */
-  .cap-band-wrap { position: relative; z-index: 5; margin-top: -34px; padding: 0 28px; }
-  .cap-band {
-    max-width: 1180px; margin: 0 auto; background: var(--red); color: #fff;
-    border-radius: 4px; box-shadow: 0 18px 44px rgba(196,30,42,0.30);
-    display: flex; align-items: center; flex-wrap: wrap; gap: 14px 30px;
-    padding: 22px 34px;
-  }
-  .cap-band .lead {
-    font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.28rem;
-    letter-spacing: 0.01em; line-height: 1.15; flex: 1; min-width: 260px;
-  }
-  .cap-band .lead b { font-weight: 700; }
-  .cap-band .pills { display: flex; gap: 8px; flex-wrap: wrap; }
-  .cap-band .pill {
-    display: inline-flex; align-items: center; gap: 7px;
-    background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.30);
-    color: #fff; padding: 7px 13px; border-radius: 999px;
-    font-weight: 600; font-size: 0.82rem; letter-spacing: 0.02em;
-  }
-  .cap-band .pill i { font-size: 0.82rem; }
+  /* credentials rail, continuous on the hero steel (no bright band, no overlap) */
+  .cred-rail { position: relative; z-index: 2; border-top: 1px solid var(--line-dark); }
+  .cred-rail-inner { max-width: 1220px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .cred { display: flex; align-items: center; gap: 14px; padding: 22px 28px; border-left: 1px solid var(--line-dark); }
+  .cred:first-child { border-left: none; padding-left: 0; }
+  .cred i { color: var(--orange); font-size: 1.5rem; flex-shrink: 0; }
+  .cred b { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.18rem; color: var(--bone); display: block; letter-spacing: 0.02em; line-height: 1; }
+  .cred span { font-size: 0.86rem; color: var(--bone-mute); }
 
   /* ===== SECTION SHELL ===== */
-  section { padding: 104px 28px; }
-  @media (max-width: 768px) { section { padding: 68px 20px; } }
+  section { padding: 100px 30px; }
+  @media (max-width: 768px) { section { padding: 64px 20px; } }
   section.alt { background: var(--concrete-alt); }
   section.dark { background: var(--steel); color: var(--bone); }
-
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 9px;
-    font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.8rem;
-    letter-spacing: 0.16em; text-transform: uppercase; color: var(--red);
-    margin-bottom: 12px;
-  }
-  .eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--red); display: inline-block; }
-  .headline { font-size: clamp(2.1rem, 4.4vw, 3.5rem); color: var(--ink); line-height: 1.04; letter-spacing: 0.004em; }
+  .sec-head { max-width: 760px; margin-bottom: 46px; }
+  .sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .kicker { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
+  .headline { font-size: clamp(2.2rem, 4.6vw, 3.7rem); color: var(--ink); line-height: 1; }
   section.dark .headline { color: var(--bone); }
+  .sec-head p { margin-top: 14px; font-size: 1.08rem; line-height: 1.62; color: var(--ink-soft); }
+  section.dark .sec-head p { color: var(--bone-mute); }
 
-  /* ===== WHAT WE LIFT (services) ===== */
-  .lift { background: var(--steel); color: var(--bone); position: relative; overflow: hidden; }
-  .lift::after {
-    content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 46%;
-    background: repeating-linear-gradient(135deg, rgba(196,30,42,0.10) 0 22px, transparent 22px 44px);
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 60%); mask-image: linear-gradient(90deg, transparent, #000 60%);
-    pointer-events: none; z-index: 0;
-  }
-  .lift-inner { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 0.82fr 1.18fr; gap: 60px; align-items: start; }
-  .lift-intro .eyebrow { color: var(--red); }
-  .lift-intro .headline { color: var(--bone); margin-bottom: 18px; }
-  .lift-intro p { color: var(--bone-mute); font-size: 1.06rem; line-height: 1.65; margin-bottom: 24px; max-width: 420px; }
-  .lift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .lift-card {
-    background: #241D1A; border: 1px solid rgba(244,239,232,0.10); border-radius: 6px;
-    padding: 24px 22px; display: flex; flex-direction: column;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 28px rgba(0,0,0,0.22);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-  .lift-card:hover { transform: translateY(-3px); border-color: rgba(196,30,42,0.5); }
-  .lift-card .ico {
-    width: 50px; height: 50px; border-radius: 4px; flex-shrink: 0;
-    background: rgba(196,30,42,0.16); color: var(--red);
-    display: inline-flex; align-items: center; justify-content: center; font-size: 1.35rem; margin-bottom: 16px;
-  }
-  .lift-card h3 { font-size: 1.32rem; color: var(--bone); margin-bottom: 7px; }
-  .lift-card p { font-size: 0.92rem; color: var(--bone-mute); line-height: 1.5; margin: 0; }
-
-  /* ===== FLEET CAPACITY LADDER (signature) ===== */
-  .fleet-head { max-width: 760px; margin: 0 auto 8px; text-align: center; }
-  .fleet-head .eyebrow { justify-content: center; }
-  .fleet-head .eyebrow::before { display: none; }
-  .fleet-head p { color: var(--ink-soft); font-size: 1.06rem; line-height: 1.6; margin-top: 12px; }
-  .ladder { max-width: 1080px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 16px; }
-  .rung {
-    display: grid; grid-template-columns: 200px 1fr 150px; gap: 22px; align-items: center;
-    background: #fff; border: 1px solid var(--line); border-radius: 6px;
-    padding: 20px 24px; box-shadow: var(--shadow-sm);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .rung:hover { transform: translateX(4px); box-shadow: var(--shadow-md); }
-  .rung-id { display: flex; align-items: baseline; gap: 8px; }
-  .rung-id .tons { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 2.7rem; color: var(--ink); line-height: 0.9; }
-  .rung-id .unit { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1rem; color: var(--red); letter-spacing: 0.04em; }
-  .rung-id .name { display: block; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 0.82rem; color: var(--ink-soft); letter-spacing: 0.02em; margin-top: 2px; }
-  .rung-bar { position: relative; height: 30px; background: var(--concrete-alt); border-radius: 3px; overflow: hidden; }
-  .rung-bar i {
-    position: absolute; left: 0; top: 0; bottom: 0; display: block;
-    background: linear-gradient(90deg, var(--red-hot), var(--red)); border-radius: 3px;
-  }
-  .rung-bar b {
-    position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
-    font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.74rem;
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft);
-  }
-  .rung-tag {
-    justify-self: end; display: inline-flex; align-items: center; gap: 7px;
-    border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px;
-    font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 0.72rem;
-    letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); white-space: nowrap;
-  }
-  .rung-tag i { color: var(--red); font-size: 0.72rem; }
-  .fleet-foot { max-width: 1080px; margin: 26px auto 0; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding: 22px 26px; background: var(--steel); color: var(--bone); border-radius: 6px; }
-  .fleet-foot p { margin: 0; font-size: 0.98rem; color: var(--bone-mute); max-width: 560px; line-height: 1.5; }
+  /* ===== FLEET LADDER (signature, leads the page) ===== */
+  .fleet { background: var(--concrete); }
+  .ladder { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+  .rung { display: grid; grid-template-columns: 188px 1fr 158px; gap: 24px; align-items: center; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--orange); border-radius: 4px; padding: 20px 26px; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .rung:hover { transform: translateX(5px); box-shadow: var(--shadow-md); }
+  .rung-id { display: flex; align-items: baseline; gap: 7px; }
+  .rung-id .tons { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 2.9rem; color: var(--ink); line-height: 0.85; }
+  .rung-id .unit { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1.05rem; color: var(--orange); letter-spacing: 0.05em; }
+  .rung-id .name { display: block; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 0.84rem; color: var(--ink-soft); margin-top: 3px; }
+  .rung-bar { position: relative; height: 28px; background: var(--concrete-alt); border-radius: 2px; overflow: hidden; }
+  .rung-bar i { position: absolute; left: 0; top: 0; bottom: 0; display: block; background: linear-gradient(90deg, var(--orange-hot), var(--orange)); }
+  .rung-bar b { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+  .rung-tag { justify-self: end; display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); border-radius: 2px; padding: 7px 13px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.84rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); white-space: nowrap; }
+  .rung-tag i { color: var(--orange); font-size: 0.78rem; }
+  .fleet-foot { max-width: 1100px; margin: 24px auto 0; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding: 24px 28px; background: var(--steel); color: var(--bone); border-radius: 4px; }
+  .fleet-foot p { margin: 0; font-size: 1.02rem; color: var(--bone-mute); max-width: 560px; line-height: 1.5; }
   .fleet-foot p strong { color: var(--bone); font-weight: 600; }
 
-  /* ===== WHY COOPER (about) ===== */
-  .why-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 58px; align-items: center; }
-  .why-text .headline { margin-bottom: 18px; }
-  .why-text p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; margin-bottom: 16px; }
-  .why-text p strong { color: var(--ink); font-weight: 600; }
-  .why-points { list-style: none; display: flex; flex-direction: column; gap: 14px; margin: 22px 0 28px; }
-  .why-points li { display: flex; gap: 14px; align-items: flex-start; }
-  .why-points .ico { color: var(--red); font-size: 1.1rem; margin-top: 3px; flex-shrink: 0; }
-  .why-points b { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.04rem; color: var(--ink); display: block; letter-spacing: 0.01em; }
-  .why-points span { font-size: 0.95rem; color: var(--ink-soft); }
-  .why-photo { position: relative; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 4/5; }
+  /* ===== WHAT WE LIFT (capability rows, not card grid) ===== */
+  .lift { background: var(--concrete-alt); }
+  .lift-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 56px; align-items: start; }
+  .lift-intro .headline { margin-bottom: 16px; }
+  .lift-intro p { color: var(--ink-soft); font-size: 1.06rem; line-height: 1.65; margin-bottom: 24px; max-width: 380px; }
+  .lift-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  .lift-row { display: flex; gap: 18px; align-items: flex-start; padding: 22px 0; border-top: 1px solid var(--line); }
+  .lift-row .ico { width: 44px; height: 44px; flex-shrink: 0; color: var(--orange); font-size: 1.5rem; display: inline-flex; align-items: center; justify-content: flex-start; }
+  .lift-row h3 { font-size: 1.4rem; color: var(--ink); margin-bottom: 4px; }
+  .lift-row p { font-size: 0.94rem; color: var(--ink-soft); line-height: 1.5; margin: 0; }
+
+  /* ===== WHY COOPER (image left, text right, no badge overlap) ===== */
+  .why { background: var(--steel); color: var(--bone); }
+  .why-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 56px; align-items: center; }
+  .why-photo { border-radius: 6px; overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 4/5; }
   .why-photo img { width: 100%; height: 100%; object-fit: cover; }
-  .ph {
-    width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
-    background: repeating-linear-gradient(135deg, #2a2320 0 16px, #241d1a 16px 32px); color: var(--bone-mute);
-    text-align: center; padding: 24px;
-  }
-  .ph i { font-size: 1.8rem; color: var(--red); }
-  .ph span { font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.5; }
-  .why-badge {
-    position: absolute; left: 18px; bottom: 18px; z-index: 2;
-    background: var(--red); color: #fff; border-radius: 4px; padding: 12px 16px;
-    display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 26px rgba(196,30,42,0.4);
-  }
-  .why-badge i { font-size: 1.5rem; }
-  .why-badge b { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.05rem; line-height: 1; display: block; }
-  .why-badge span { font-size: 0.74rem; opacity: 0.9; letter-spacing: 0.04em; }
+  .ph { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: var(--steel-2); border: 1px dashed rgba(245,239,230,0.22); color: var(--bone-mute); text-align: center; padding: 26px; }
+  .ph i { font-size: 1.9rem; color: var(--orange); }
+  .ph span { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.92rem; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.5; }
+  .why-text .headline { color: var(--bone); margin-bottom: 16px; }
+  .why-text > p { color: var(--bone-mute); font-size: 1.06rem; line-height: 1.7; margin-bottom: 8px; }
+  .why-text > p strong { color: var(--bone); font-weight: 600; }
+  .why-points { list-style: none; display: flex; flex-direction: column; gap: 2px; margin: 24px 0 28px; }
+  .why-points li { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-top: 1px solid var(--line-dark); }
+  .why-points li:last-child { border-bottom: 1px solid var(--line-dark); }
+  .why-points .ico { color: var(--orange); font-size: 1.35rem; margin-top: 2px; flex-shrink: 0; width: 26px; text-align: center; }
+  .why-points b { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--bone); display: block; letter-spacing: 0.02em; line-height: 1.1; }
+  .why-points span { font-size: 0.95rem; color: var(--bone-mute); }
 
-  /* ===== SERVICE AREA (split) ===== */
-  .area { background: var(--concrete-alt); }
-  .area-head { max-width: 760px; margin: 0 auto 44px; text-align: center; }
-  .area-head .eyebrow { justify-content: center; }
-  .area-head .eyebrow::before { display: none; }
-  .area-head p { color: var(--ink-soft); font-size: 1.06rem; line-height: 1.6; margin-top: 12px; }
-  .area-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-  .area-card {
-    background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
-    display: flex; flex-direction: column; box-shadow: var(--shadow-sm);
-  }
-  .area-card .top {
-    background: var(--steel); color: var(--bone); padding: 24px 26px;
-    display: flex; align-items: center; justify-content: space-between; gap: 14px;
-  }
-  .area-card .top h3 { font-size: 1.5rem; color: var(--bone); }
-  .area-card .top .zone { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.14em; color: var(--red); text-transform: uppercase; margin-bottom: 4px; }
-  .area-card .top .reg { width: 46px; height: 46px; border-radius: 50%; background: rgba(196,30,42,0.18); color: var(--red); display: inline-flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
-  .area-card .body { padding: 24px 26px; display: flex; flex-direction: column; flex: 1; }
-  .area-card .counties { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
-  .area-card .county { background: var(--concrete); border: 1px solid var(--line); border-radius: 999px; padding: 6px 13px; font-size: 0.86rem; font-weight: 500; color: var(--ink); }
-  .area-card .contact-row { display: flex; flex-direction: column; gap: 9px; margin-top: auto; }
-  .area-link { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 600; color: var(--ink); font-size: 1rem; }
-  .area-link i { width: 34px; height: 34px; border-radius: 50%; background: var(--concrete-alt); color: var(--red); display: inline-flex; align-items: center; justify-content: center; font-size: 0.92rem; flex-shrink: 0; }
-  .area-link:hover { color: var(--red); }
-  .area-card .call-cta { margin-top: 18px; }
+  /* ===== SERVICE AREA (single split panel, center divider) ===== */
+  .area { background: var(--concrete); }
+  .area-panel { max-width: 1100px; margin: 0 auto; background: #fff; border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
+  .area-half { padding: 38px 40px; }
+  .area-half:first-child { border-right: 1px solid var(--line); }
+  .area-half .zone { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.92rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 4px; }
+  .area-half h3 { font-size: 1.85rem; color: var(--ink); margin-bottom: 18px; }
+  .area-half .counties { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  .area-half .county { background: var(--concrete-alt); border-radius: 2px; padding: 6px 13px; font-size: 0.88rem; font-weight: 500; color: var(--ink); }
+  .area-half .lines { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
+  .area-link { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 600; color: var(--ink); font-size: 1rem; }
+  .area-link i { color: var(--orange); width: 20px; text-align: center; flex-shrink: 0; }
+  .area-link:hover { color: var(--orange); }
+  .area-half .btn { width: 100%; }
 
-  /* ===== PROOF ===== */
+  /* ===== PROOF (single wide pull-quote) ===== */
   .proof { background: var(--steel); color: var(--bone); }
-  .proof-inner { max-width: 1180px; margin: 0 auto; }
-  .proof-head { max-width: 720px; margin-bottom: 40px; }
-  .proof-head .headline { color: var(--bone); }
-  .proof-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 22px; }
-  .proof-feature, .proof-small {
-    background: #241D1A; border: 1px solid rgba(244,239,232,0.10); border-radius: 8px;
-    padding: 34px 32px; display: flex; flex-direction: column;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 14px 34px rgba(0,0,0,0.24);
-  }
-  .proof-col { display: flex; flex-direction: column; gap: 22px; }
-  .proof-feature .quote-ico, .proof-small .quote-ico { color: var(--red); font-size: 1.7rem; margin-bottom: 16px; }
-  .proof-feature blockquote { font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 1.62rem; line-height: 1.3; color: var(--bone); margin-bottom: 22px; text-transform: none; letter-spacing: 0; }
-  .proof-small blockquote { font-size: 1.02rem; line-height: 1.55; color: var(--bone); margin-bottom: 16px; font-weight: 400; }
-  .proof cite { font-style: normal; margin-top: auto; }
-  .proof cite b { font-family: 'Oswald', sans-serif; font-weight: 600; color: var(--bone); display: block; font-size: 0.98rem; letter-spacing: 0.02em; }
-  .proof cite span { font-size: 0.84rem; color: var(--bone-mute); }
-  .proof-ph-note {
-    margin-bottom: 14px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--red); border: 1px dashed rgba(196,30,42,0.5); border-radius: 3px; padding: 5px 9px; align-self: flex-start;
-  }
+  .proof-inner { max-width: 980px; margin: 0 auto; text-align: center; }
+  .proof .qmark { color: var(--orange); font-size: 3rem; margin-bottom: 18px; }
+  .proof blockquote { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: clamp(1.8rem, 3.6vw, 2.9rem); line-height: 1.16; color: var(--bone); letter-spacing: 0.01em; margin-bottom: 26px; text-transform: none; }
+  .proof cite { font-style: normal; display: block; }
+  .proof cite b { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--bone); font-size: 1.15rem; letter-spacing: 0.04em; display: block; }
+  .proof cite span { font-size: 0.92rem; color: var(--bone-mute); }
+  .proof-note { margin-top: 26px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); border: 1px dashed rgba(194,93,28,0.5); border-radius: 2px; padding: 6px 12px; display: inline-block; }
 
   /* ===== FAQ ===== */
-  .faq-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 0.42fr 0.58fr; gap: 54px; align-items: start; }
+  .faq-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 0.4fr 0.6fr; gap: 54px; align-items: start; }
   .faq-intro .headline { margin-bottom: 16px; }
   .faq-intro p { color: var(--ink-soft); font-size: 1.04rem; line-height: 1.65; margin-bottom: 22px; }
-  .faq-intro .btn { margin-top: 4px; }
   .accordion { display: flex; flex-direction: column; gap: 10px; }
-  .acc-item { background: #fff; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
-  .acc-item.open { border-color: var(--red); }
-  .acc-header {
-    width: 100%; background: transparent; border: none; padding: 19px 22px; cursor: pointer;
-    display: flex; justify-content: space-between; align-items: center; gap: 16px;
-    font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 1.06rem; color: var(--ink);
-    text-align: left; line-height: 1.3; letter-spacing: 0.01em; text-transform: none;
-  }
-  .acc-header i { color: var(--red); transition: transform 0.3s ease; flex-shrink: 0; }
+  .acc-item { background: #fff; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .acc-item.open { border-color: var(--orange); }
+  .acc-header { width: 100%; background: transparent; border: none; padding: 19px 22px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1.18rem; color: var(--ink); text-align: left; line-height: 1.2; letter-spacing: 0.02em; text-transform: none; }
+  .acc-header i { color: var(--orange); transition: transform 0.3s ease; flex-shrink: 0; }
   .acc-item.open .acc-header i { transform: rotate(180deg); }
   .acc-content { max-height: 0; overflow: hidden; transition: max-height 0.32s ease; }
   .acc-item.open .acc-content { max-height: 360px; }
   .acc-text { padding: 0 22px 20px; color: var(--ink-soft); font-size: 0.97rem; line-height: 1.65; }
 
   /* ===== CONTACT ===== */
-  .contact { background: var(--steel); color: var(--bone); }
-  .contact-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 54px; align-items: start; }
-  .contact-card { background: var(--bone); color: var(--ink); border-radius: 10px; padding: 38px 36px; box-shadow: 0 24px 60px rgba(0,0,0,0.3); }
-  .contact-card .eyebrow { color: var(--red); }
-  .contact-card .headline { color: var(--ink); font-size: clamp(1.9rem, 3vw, 2.4rem); margin-bottom: 10px; }
+  .contact { background: var(--concrete-alt); }
+  .contact-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 50px; align-items: start; }
+  .contact-card { background: #fff; color: var(--ink); border-radius: 8px; padding: 38px 36px; box-shadow: var(--shadow-md); }
+  .contact-card .kicker { margin-bottom: 6px; }
+  .contact-card .headline { color: var(--ink); font-size: clamp(1.9rem, 3vw, 2.5rem); margin-bottom: 10px; }
   .contact-card .lede { color: var(--ink-soft); font-size: 1rem; line-height: 1.55; margin-bottom: 24px; }
   .contact-form { display: flex; flex-direction: column; gap: 14px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .form-group { display: flex; flex-direction: column; }
   .form-group label { font-size: 0.78rem; font-weight: 700; color: var(--ink); margin-bottom: 5px; letter-spacing: 0.02em; }
-  .form-group input, .form-group select, .form-group textarea {
-    padding: 12px 14px; background: #fff; border: 1.5px solid rgba(26,22,20,0.18); border-radius: 4px;
-    color: var(--ink); font-family: 'Barlow', sans-serif; font-size: 0.98rem;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  }
-  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(26,22,20,0.4); }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(196,30,42,0.14);
-  }
+  .form-group input, .form-group select, .form-group textarea { padding: 12px 14px; background: var(--concrete); border: 1.5px solid rgba(28,24,19,0.18); border-radius: 3px; color: var(--ink); font-family: 'Barlow', sans-serif; font-size: 0.98rem; transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(28,24,19,0.4); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--orange); background: #fff; box-shadow: 0 0 0 3px rgba(194,93,28,0.14); }
   .form-group textarea { resize: vertical; min-height: 96px; }
-  .field-err { color: var(--red-hot); font-size: 0.8rem; font-weight: 600; margin-top: 5px; display: none; }
+  .field-err { color: var(--orange-hot); font-size: 0.8rem; font-weight: 600; margin-top: 5px; display: none; }
   .form-group.invalid .field-err { display: block; }
-  .form-group.invalid input, .form-group.invalid select, .form-group.invalid textarea { border-color: var(--red); }
+  .form-group.invalid input, .form-group.invalid select, .form-group.invalid textarea { border-color: var(--orange); }
   .contact-form .btn { margin-top: 6px; align-self: flex-start; padding: 15px 30px; }
-  .form-status { font-size: 0.94rem; padding: 12px 16px; border-radius: 4px; display: none; margin-top: 8px; line-height: 1.5; }
+  .form-status { font-size: 0.94rem; padding: 12px 16px; border-radius: 3px; display: none; margin-top: 8px; line-height: 1.5; }
   .form-status.show { display: block; }
-  .form-status.success { background: rgba(40,120,60,0.14); border: 1px solid #3a7a44; color: #2c5d34; }
+  .form-status.success { background: rgba(40,120,60,0.12); border: 1px solid #3a7a44; color: #2c5d34; }
 
-  .contact-side { display: flex; flex-direction: column; gap: 18px; }
-  .contact-side > .lead { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); }
-  .yard-tile { background: #241D1A; border: 1px solid var(--line-dark); border-radius: 8px; padding: 22px 24px; }
-  .yard-tile h3 { font-size: 1.24rem; color: var(--bone); margin-bottom: 3px; }
-  .yard-tile .zone { font-size: 0.82rem; color: var(--bone-mute); margin-bottom: 14px; }
+  .contact-side { display: flex; flex-direction: column; gap: 16px; }
+  .contact-side .lead { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.92rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); }
+  .yard-tile { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--orange); border-radius: 4px; padding: 22px 24px; box-shadow: var(--shadow-sm); }
+  .yard-tile h3 { font-size: 1.4rem; color: var(--ink); margin-bottom: 2px; }
+  .yard-tile .zone { font-size: 0.86rem; color: var(--ink-soft); margin-bottom: 14px; }
   .yard-tile .row { display: flex; flex-direction: column; gap: 9px; }
-  .yard-link { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--bone); font-weight: 600; font-size: 1rem; }
-  .yard-link i { width: 36px; height: 36px; border-radius: 50%; background: rgba(196,30,42,0.16); color: var(--red); display: inline-flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0; }
-  .yard-link:hover { color: var(--red); }
-  .contact-extra { display: flex; flex-direction: column; gap: 12px; padding-top: 6px; }
-  .extra-row { display: flex; align-items: flex-start; gap: 12px; color: var(--bone-mute); font-size: 0.95rem; }
-  .extra-row i { color: var(--red); margin-top: 3px; width: 18px; text-align: center; flex-shrink: 0; }
-  .extra-row a { color: var(--bone); text-decoration: none; }
-  .extra-row a:hover { color: var(--red); }
+  .yard-link { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); font-weight: 600; font-size: 1rem; }
+  .yard-link i { color: var(--orange); width: 20px; text-align: center; flex-shrink: 0; }
+  .yard-link:hover { color: var(--orange); }
+  .contact-extra { display: flex; flex-direction: column; gap: 11px; padding: 4px 2px 0; }
+  .extra-row { display: flex; align-items: flex-start; gap: 12px; color: var(--ink-soft); font-size: 0.94rem; }
+  .extra-row i { color: var(--orange); margin-top: 3px; width: 18px; text-align: center; flex-shrink: 0; }
+  .extra-row a { color: var(--ink); text-decoration: none; font-weight: 600; }
+  .extra-row a:hover { color: var(--orange); }
 
   /* ===== FOOTER ===== */
-  footer { background: var(--steel-deep); color: var(--bone-mute); padding: 64px 28px 26px; }
-  .footer-inner { max-width: 1240px; margin: 0 auto 36px; display: grid; grid-template-columns: 2fr 1fr 1.3fr; gap: 48px; }
-  .footer-brand .wm { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--bone); letter-spacing: 0.04em; text-transform: uppercase; }
-  .footer-brand .wm b { color: var(--red); }
-  .footer-brand .tag { font-size: 0.62rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--bone-mute); margin: 4px 0 16px; font-weight: 600; }
+  footer { background: var(--steel-deep); color: var(--bone-mute); padding: 62px 30px 26px; }
+  .footer-inner { max-width: 1220px; margin: 0 auto 34px; display: grid; grid-template-columns: 2fr 1fr 1.3fr; gap: 46px; }
+  .footer-brand .wm { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; color: var(--bone); letter-spacing: 0.03em; text-transform: uppercase; }
+  .footer-brand .wm b { color: var(--orange); }
+  .footer-brand .tag { font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--bone-mute); margin: 4px 0 16px; font-weight: 600; }
   .footer-brand p { font-size: 0.9rem; line-height: 1.6; max-width: 330px; margin-bottom: 16px; }
-  .footer-social a { width: 40px; height: 40px; border-radius: 4px; background: rgba(244,239,232,0.08); color: var(--bone); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.2s ease; }
-  .footer-social a:hover { background: var(--red); color: #fff; transform: translateY(-2px); }
-  .footer-col h4 { font-family: 'Oswald', sans-serif; font-size: 0.82rem; font-weight: 600; color: var(--red); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 16px; }
+  .footer-social a { width: 40px; height: 40px; border-radius: 4px; background: rgba(245,239,230,0.08); color: var(--bone); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.2s ease; }
+  .footer-social a:hover { background: var(--orange); color: #fff; transform: translateY(-2px); }
+  .footer-col h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 15px; }
   .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
   .footer-col a { color: var(--bone-mute); text-decoration: none; font-size: 0.92rem; transition: color 0.2s ease; }
-  .footer-col a:hover { color: var(--red); }
+  .footer-col a:hover { color: var(--orange); }
   .footer-col address { font-style: normal; display: flex; flex-direction: column; gap: 11px; }
   .footer-col address a { display: inline-flex; align-items: center; gap: 9px; }
-  .footer-col address i { color: var(--red); width: 16px; text-align: center; }
-  .footer-bottom {
-    max-width: 1240px; margin: 0 auto; border-top: 1px solid var(--line-dark); padding-top: 22px;
-    display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; font-size: 0.82rem;
-  }
+  .footer-col address i { color: var(--orange); width: 16px; text-align: center; }
+  .footer-bottom { max-width: 1220px; margin: 0 auto; border-top: 1px solid var(--line-dark); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; font-size: 0.82rem; }
   .footer-bottom .links { display: flex; gap: 18px; flex-wrap: wrap; }
   .footer-bottom .links a { color: var(--bone-mute); text-decoration: none; }
-  .footer-bottom .links a:hover { color: var(--red); }
-  .built-by { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--bone-mute); opacity: 0.8; transition: opacity 0.2s ease; }
+  .footer-bottom .links a:hover { color: var(--orange); }
+  .built-by { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--bone-mute); opacity: 0.82; transition: opacity 0.2s ease; }
   .built-by:hover { opacity: 1; }
   .built-by span { font-size: 0.78rem; letter-spacing: 0.04em; }
   .built-by img { height: 20px; width: auto; }
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 1024px) {
-    .lift-inner { grid-template-columns: 1fr; gap: 36px; }
+    .lift-inner { grid-template-columns: 1fr; gap: 34px; }
     .lift-intro p { max-width: 560px; }
-    .why-inner { grid-template-columns: 1fr; gap: 36px; }
-    .why-photo { aspect-ratio: 16/10; max-height: 420px; }
-    .proof-grid { grid-template-columns: 1fr; }
-    .proof-col { flex-direction: row; }
+    .why-inner { grid-template-columns: 1fr; gap: 30px; }
+    .why-photo { aspect-ratio: 16/10; max-height: 380px; order: -1; }
     .faq-inner { grid-template-columns: 1fr; gap: 28px; }
     .contact-inner { grid-template-columns: 1fr; gap: 28px; }
     .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -637,52 +433,52 @@
     nav.site-nav { padding: 0 18px; height: var(--nav-h-sm); }
     .nav-links, .nav-right .nav-phone, .nav-right .btn { display: none; }
     .mobile-actions { display: flex; }
+    .nav-logo .tag { display: none; }
 
-    .hero { padding: calc(var(--nav-h-sm) + 36px) 20px 84px; background-position: center; }
-    .hero-bg { background-position: center 55%; }
-    .hero p.lede { font-size: 1.06rem; }
+    .hero { padding: calc(var(--nav-h-sm) + 34px) 20px 0; }
+    .hero-bg { background-position: center 50%; }
+    .hero-content { padding-bottom: 40px; }
+    .hero h1 { font-size: 2.55rem; }
+    .hero p.lede { font-size: 1.04rem; margin-bottom: 26px; }
     .hero-ctas { gap: 10px; }
-    .hero-ctas .btn { flex: 1; min-width: 0; padding: 14px 16px; font-size: 0.9rem; }
+    .hero-ctas .btn { width: 100%; padding: 15px 18px; }
 
-    .cap-band { padding: 20px 22px; gap: 14px; }
-    .cap-band .lead { font-size: 1.1rem; min-width: 0; }
+    /* credentials rail stacks to a tidy 1-col list, not 3 cramped columns */
+    .cred-rail-inner { grid-template-columns: 1fr; }
+    .cred { border-left: none; border-top: 1px solid var(--line-dark); padding: 16px 0; }
+    .cred:first-child { border-top: none; }
 
-    .lift-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .lift-card { padding: 18px 16px; }
-    .lift-card .ico { width: 44px; height: 44px; font-size: 1.2rem; margin-bottom: 12px; }
-    .lift-card h3 { font-size: 1.12rem; }
-    .lift-card p { font-size: 0.85rem; }
-
-    .ladder { gap: 12px; margin-top: 34px; }
-    .rung { grid-template-columns: 96px 1fr; gap: 14px; padding: 16px 16px; }
-    .rung-id { flex-direction: column; align-items: flex-start; gap: 0; }
-    .rung-id .tons { font-size: 2rem; }
-    .rung-bar { grid-column: 1 / -1; height: 24px; }
-    .rung-tag { grid-column: 1 / -1; justify-self: start; }
-    .fleet-foot { padding: 20px; }
+    .ladder { gap: 12px; }
+    .rung { grid-template-columns: auto 1fr; gap: 8px 16px; padding: 16px 18px; }
+    .rung-id { align-self: center; }
+    .rung-id .tons { font-size: 2.3rem; }
+    .rung-bar { grid-column: 2; height: 22px; }
+    .rung-tag { grid-column: 2; justify-self: start; margin-top: 2px; }
+    .fleet-foot { padding: 22px; }
     .fleet-foot .btn { width: 100%; }
 
-    .why-points b { font-size: 1rem; }
-    .why-badge { left: 14px; bottom: 14px; padding: 10px 13px; }
+    .lift-rows { grid-template-columns: 1fr; gap: 0; }
+    .lift-row { padding: 18px 0; }
 
-    .area-grid { grid-template-columns: 1fr; gap: 16px; }
+    .why-points b { font-size: 1.12rem; }
 
-    .proof-col { flex-direction: column; }
-    .proof-feature blockquote { font-size: 1.32rem; }
-    .proof-feature, .proof-small { padding: 26px 22px; }
+    .area-panel { grid-template-columns: 1fr; }
+    .area-half { padding: 28px 24px; }
+    .area-half:first-child { border-right: none; border-bottom: 1px solid var(--line); }
+
+    .proof blockquote { font-size: 1.5rem; }
 
     .contact-card { padding: 26px 22px; }
-    .contact-card .headline { font-size: 1.75rem; }
+    .contact-card .headline { font-size: 1.8rem; }
     .form-row { grid-template-columns: 1fr; }
 
-    .footer-inner { grid-template-columns: 1fr; gap: 28px; margin-bottom: 26px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 26px; margin-bottom: 26px; }
     .footer-bottom { flex-direction: column; align-items: flex-start; gap: 14px; }
   }
 
   @media (max-width: 420px) {
-    .hero h1 { font-size: 2.35rem; }
-    .lift-grid { grid-template-columns: 1fr; }
-    .cap-chip { font-size: 0.95rem; padding: 7px 12px; }
+    .hero h1 { font-size: 2.25rem; }
+    .rung-id .tons { font-size: 2rem; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -697,12 +493,12 @@
 <nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <a href="#top" class="nav-logo" aria-label="Cooper Crane home">
-      <span class="wm">COOPER <b>CRANE</b></span>
-      <span class="tag">South Florida Crane Service</span>
+      <span class="mark"><i class="fa-solid fa-truck-arrow-right"></i></span>
+      <span><span class="wm">Cooper Crane</span><span class="tag">South Florida Crane Service</span></span>
     </a>
     <ul class="nav-links">
-      <li><a href="#lift">What We Lift</a></li>
       <li><a href="#fleet">The Fleet</a></li>
+      <li><a href="#lift">What We Lift</a></li>
       <li><a href="#why">Why Cooper</a></li>
       <li><a href="#area">Service Area</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -713,9 +509,7 @@
     </div>
     <div class="mobile-actions">
       <a href="tel:+19544456186" class="mobile-call" aria-label="Call Cooper Crane Southeast yard"><i class="fa-solid fa-phone-volume"></i></a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
@@ -728,8 +522,8 @@
     <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
   </div>
   <nav class="drawer-links" aria-label="Mobile navigation">
-    <a href="#lift">What We Lift</a>
     <a href="#fleet">The Fleet</a>
+    <a href="#lift">What We Lift</a>
     <a href="#why">Why Cooper</a>
     <a href="#area">Service Area</a>
     <a href="#faq">FAQ</a>
@@ -748,202 +542,126 @@
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <span class="hero-eyebrow"><i class="fa-solid fa-location-dot"></i> Two yards across six South Florida counties</span>
-      <h1>From a Backyard AC Unit to a <span class="red">40 Ton</span> Lift, We Pick It Up</h1>
-      <p class="lede">Cooper Crane runs certified-operator cranes and boom trucks across South Florida, from a gate-width mini spider crane to a 40-ton mobile crane. You point. We lift.</p>
+      <span class="hero-eyebrow"><i class="fa-solid fa-location-dot"></i> Certified operators &middot; Two yards &middot; Six counties</span>
+      <h1>South Florida Crane Service, From a <span class="o">2-Ton Spider</span> to a <span class="o">40-Ton</span> Mobile</h1>
+      <p class="lede">Cooper Crane sets rooftop AC units, trusses, roofing and generators across the Atlantic and Gulf coasts. You point. We lift.</p>
       <div class="hero-ctas">
         <a href="tel:+19544456186" class="btn"><i class="fa-solid fa-phone-volume"></i> Call SE <small>(954) 445-6186</small></a>
         <a href="tel:+12392553920" class="btn btn-dark"><i class="fa-solid fa-phone-volume"></i> Call SW <small>(239) 255-3920</small></a>
       </div>
-      <div class="cap-chips">
-        <span class="lbl">In the fleet</span>
-        <span class="cap-chip">2 <span>Ton spider</span></span>
-        <span class="cap-chip">17 <span>Ton</span></span>
-        <span class="cap-chip">35 <span>Ton</span></span>
-        <span class="cap-chip">40 <span>Ton</span></span>
-      </div>
+    </div>
+  </div>
+  <div class="cred-rail">
+    <div class="cred-rail-inner">
+      <div class="cred"><i class="fa-solid fa-helmet-safety"></i><div><b>Certified operators</b><span>On every single lift</span></div></div>
+      <div class="cred"><i class="fa-solid fa-location-crosshairs"></i><div><b>Two yards, six counties</b><span>Atlantic and Gulf coasts</span></div></div>
+      <div class="cred"><i class="fa-solid fa-weight-hanging"></i><div><b>2 to 40 tons</b><span>Plus boom trucks and accessories</span></div></div>
     </div>
   </div>
 </header>
 
-<!-- ===== CAPACITY BAND (overlaps hero) ===== -->
-<div class="cap-band-wrap">
-  <div class="cap-band">
-    <p class="lead">Two yards. Six counties. <b>2 to 40 tons</b> of certified-operator lifting.</p>
-    <div class="pills">
-      <span class="pill"><i class="fa-solid fa-helmet-safety"></i> Certified operators</span>
-      <span class="pill"><i class="fa-solid fa-truck-ramp-box"></i> Boom trucks + accessories</span>
-    </div>
-  </div>
-</div>
-
-<!-- ===== WHAT WE LIFT ===== -->
-<section class="lift" id="lift">
-  <div class="lift-inner">
-    <div class="lift-intro">
-      <span class="eyebrow">What we lift</span>
-      <h2 class="headline">If It Needs to Go Up, Over or Down</h2>
-      <p>Most of our days are spent setting the heavy, awkward things that won't fit through a door or up a ladder. Tell us the weight and the reach; we will bring the machine that handles it.</p>
-      <a href="#contact" class="btn"><i class="fa-solid fa-clipboard-check"></i> Tell Us Your Lift</a>
-    </div>
-    <div class="lift-grid">
-      <div class="lift-card">
-        <span class="ico"><i class="fa-solid fa-snowflake"></i></span>
-        <h3>AC Units</h3>
-        <p>Rooftop condensers and air handlers set clean onto curbs and pads, residential to commercial.</p>
-      </div>
-      <div class="lift-card">
-        <span class="ico"><i class="fa-solid fa-tents"></i></span>
-        <h3>Pest-Control Tarps</h3>
-        <p>Fumigation tenting lifted up and over the roofline so tarping crews can work fast and safe.</p>
-      </div>
-      <div class="lift-card">
-        <span class="ico"><i class="fa-solid fa-grip-lines"></i></span>
-        <h3>Trusses</h3>
-        <p>Roof and floor trusses flown into place to keep framing crews moving on schedule.</p>
-      </div>
-      <div class="lift-card">
-        <span class="ico"><i class="fa-solid fa-house-chimney"></i></span>
-        <h3>Roofing</h3>
-        <p>Tile, shingle bundles and dry-in material hoisted straight to the deck instead of up a ladder.</p>
-      </div>
-      <div class="lift-card">
-        <span class="ico"><i class="fa-solid fa-plug-circle-bolt"></i></span>
-        <h3>Generators</h3>
-        <p>Standby and portable generators placed onto pads and rooftops without the wrestling match.</p>
-      </div>
-      <div class="lift-card">
-        <span class="ico"><i class="fa-solid fa-arrows-up-to-line"></i></span>
-        <h3>And Much More</h3>
-        <p>Trees, steel, signage, hot tubs, equipment swaps. If you can rig it, odds are we can lift it.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FLEET CAPACITY LADDER (signature) ===== -->
+<!-- ===== FLEET LADDER (signature) ===== -->
 <section class="fleet" id="fleet">
-  <div class="fleet-head">
-    <span class="eyebrow">The fleet</span>
+  <div class="sec-head center">
+    <span class="kicker">The Fleet</span>
     <h2 class="headline">One Phone Call Covers 2 to 40 Tons</h2>
-    <p>Pick the rated capacity your job needs. Each machine below is in active rotation, tagged with the yard that stocks it.</p>
+    <p>Pick the rated capacity your job needs. Every machine below is in active rotation, tagged with the yard that stocks it.</p>
   </div>
   <div class="ladder">
     <div class="rung">
-      <div class="rung-id">
-        <span class="tons">2<span class="unit">T</span></span>
-        <span class="name">Mini Spider Crane</span>
-      </div>
+      <div class="rung-id"><span class="tons">2<span class="unit">T</span></span><span class="name">Mini Spider Crane</span></div>
       <div class="rung-bar"><i style="width:14%"></i><b>Fits through a gate</b></div>
       <span class="rung-tag"><i class="fa-solid fa-location-dot"></i> Both Yards</span>
     </div>
     <div class="rung">
-      <div class="rung-id">
-        <span class="tons">17<span class="unit">T</span></span>
-        <span class="name">Boom Truck</span>
-      </div>
+      <div class="rung-id"><span class="tons">17<span class="unit">T</span></span><span class="name">Boom Truck</span></div>
       <div class="rung-bar"><i style="width:42%"></i><b>Everyday workhorse</b></div>
       <span class="rung-tag"><i class="fa-solid fa-location-dot"></i> Both Yards</span>
     </div>
     <div class="rung">
-      <div class="rung-id">
-        <span class="tons">35<span class="unit">T</span></span>
-        <span class="name">Boom Truck</span>
-      </div>
+      <div class="rung-id"><span class="tons">35<span class="unit">T</span></span><span class="name">Boom Truck</span></div>
       <div class="rung-bar"><i style="width:75%"></i><b>Bigger reach + load</b></div>
       <span class="rung-tag"><i class="fa-solid fa-location-dot"></i> Southeast Yard</span>
     </div>
     <div class="rung">
-      <div class="rung-id">
-        <span class="tons">40<span class="unit">T</span></span>
-        <span class="name">Mobile Crane</span>
-      </div>
+      <div class="rung-id"><span class="tons">40<span class="unit">T</span></span><span class="name">Mobile Crane</span></div>
       <div class="rung-bar"><i style="width:100%"></i><b>Our heaviest lift</b></div>
       <span class="rung-tag"><i class="fa-solid fa-location-dot"></i> Both Yards</span>
     </div>
   </div>
   <div class="fleet-foot">
-    <p><strong>Not sure which size you need?</strong> Give us the weight, the height and the reach and we will spec the right crane for you.</p>
+    <p><strong>Not sure which size you need?</strong> Give us the weight, the height and the reach, and we will spec the right crane for you.</p>
     <a href="#contact" class="btn"><i class="fa-solid fa-ruler-combined"></i> Spec My Lift</a>
   </div>
 </section>
 
+<!-- ===== WHAT WE LIFT ===== -->
+<section class="lift" id="lift">
+  <div class="lift-inner">
+    <div class="lift-intro">
+      <span class="kicker">What We Lift</span>
+      <h2 class="headline">If It Needs to Go Up, Over or Down</h2>
+      <p>Most of our days are spent setting the heavy, awkward things that won't fit through a door or up a ladder.</p>
+      <a href="#contact" class="btn"><i class="fa-solid fa-clipboard-check"></i> Tell Us Your Lift</a>
+    </div>
+    <div class="lift-rows">
+      <div class="lift-row"><span class="ico"><i class="fa-solid fa-snowflake"></i></span><div><h3>AC Units</h3><p>Rooftop condensers and air handlers set clean onto curbs and pads.</p></div></div>
+      <div class="lift-row"><span class="ico"><i class="fa-solid fa-tents"></i></span><div><h3>Pest-Control Tarps</h3><p>Fumigation tenting lifted up and over the roofline for tarping crews.</p></div></div>
+      <div class="lift-row"><span class="ico"><i class="fa-solid fa-grip-lines"></i></span><div><h3>Trusses</h3><p>Roof and floor trusses flown into place to keep framing on schedule.</p></div></div>
+      <div class="lift-row"><span class="ico"><i class="fa-solid fa-house-chimney"></i></span><div><h3>Roofing</h3><p>Tile, shingle bundles and dry-in material hoisted straight to the deck.</p></div></div>
+      <div class="lift-row"><span class="ico"><i class="fa-solid fa-plug-circle-bolt"></i></span><div><h3>Generators</h3><p>Standby and portable generators placed onto pads and rooftops.</p></div></div>
+      <div class="lift-row"><span class="ico"><i class="fa-solid fa-arrows-up-to-line"></i></span><div><h3>And Much More</h3><p>Trees, steel, signage, hot tubs. If you can rig it, we can lift it.</p></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== WHY COOPER ===== -->
-<section class="why alt" id="why">
+<section class="why" id="why">
   <div class="why-inner">
+    <div class="why-photo">
+      <div class="ph"><i class="fa-solid fa-camera"></i><span>Real photo needed<br>Operator running a lift on site</span></div>
+    </div>
     <div class="why-text">
-      <span class="eyebrow">Why Cooper Crane</span>
+      <span class="kicker">Why Cooper Crane</span>
       <h2 class="headline">Local Iron, Certified Hands</h2>
       <p>Cooper Crane is a <strong>two-yard South Florida operation</strong>, not a national call center. The same people who answer the phone run the machines, so the crew that shows up already knows your job.</p>
       <ul class="why-points">
-        <li><span class="ico"><i class="fa-solid fa-helmet-safety"></i></span><div><b>Certified, experienced operators</b><span>Every lift is rigged, signaled and run by a trained operator who treats your site and crew with respect.</span></div></li>
-        <li><span class="ico"><i class="fa-solid fa-location-crosshairs"></i></span><div><b>Two yards, six counties</b><span>Machines staged on both coasts means a shorter drive to your site and faster scheduling.</span></div></li>
-        <li><span class="ico"><i class="fa-solid fa-money-bill-wave"></i></span><div><b>Easy, clear billing</b><span>QuickBooks invoicing with credit card, Cash App and Zelle accepted. No runaround.</span></div></li>
+        <li><span class="ico"><i class="fa-solid fa-helmet-safety"></i></span><div><b>Certified, experienced operators</b><span>Every lift is rigged, signaled and run by a trained operator who respects your site and crew.</span></div></li>
+        <li><span class="ico"><i class="fa-solid fa-location-crosshairs"></i></span><div><b>Two yards, six counties</b><span>Machines staged on both coasts means a shorter drive and faster scheduling.</span></div></li>
+        <li><span class="ico"><i class="fa-solid fa-money-bill-wave"></i></span><div><b>Clear, easy billing</b><span>QuickBooks invoicing with credit card, Cash App and Zelle accepted. No runaround.</span></div></li>
       </ul>
       <a href="#contact" class="btn"><i class="fa-solid fa-clipboard-check"></i> Request a Quote</a>
-    </div>
-    <div class="why-photo">
-      <div class="ph">
-        <i class="fa-solid fa-camera"></i>
-        <span>Real photo needed<br>Operator running a lift on site</span>
-      </div>
-      <div class="why-badge">
-        <i class="fa-solid fa-helmet-safety"></i>
-        <div><b>Certified</b><span>Operators on every lift</span></div>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- ===== SERVICE AREA ===== -->
 <section class="area" id="area">
-  <div class="area-head">
-    <span class="eyebrow">Service area</span>
+  <div class="sec-head center">
+    <span class="kicker">Service Area</span>
     <h2 class="headline">Pick the Yard Nearest Your Job</h2>
-    <p>Cooper Crane runs two yards so a machine is never far from your site. Call the coast you are on.</p>
+    <p>Two yards mean a machine is never far from your site. Call the coast you are on.</p>
   </div>
-  <div class="area-grid">
-    <div class="area-card">
-      <div class="top">
-        <div>
-          <span class="zone">Southeast Yard</span>
-          <h3>Atlantic Coast</h3>
-        </div>
-        <span class="reg"><i class="fa-solid fa-water"></i></span>
+  <div class="area-panel">
+    <div class="area-half">
+      <span class="zone">Southeast Yard &middot; Atlantic Coast</span>
+      <h3>Broward to Palm Beach</h3>
+      <div class="counties"><span class="county">Broward</span><span class="county">Miami-Dade</span><span class="county">Palm Beach</span></div>
+      <div class="lines">
+        <a href="tel:+19544456186" class="area-link"><i class="fa-solid fa-phone-volume"></i> (954) 445-6186</a>
+        <a href="mailto:Coopercranefl@gmail.com" class="area-link"><i class="fa-solid fa-envelope"></i> Coopercranefl@gmail.com</a>
       </div>
-      <div class="body">
-        <div class="counties">
-          <span class="county">Broward</span>
-          <span class="county">Miami-Dade</span>
-          <span class="county">Palm Beach</span>
-        </div>
-        <div class="contact-row">
-          <a href="tel:+19544456186" class="area-link"><i class="fa-solid fa-phone-volume"></i> (954) 445-6186</a>
-          <a href="mailto:Coopercranefl@gmail.com" class="area-link"><i class="fa-solid fa-envelope"></i> Coopercranefl@gmail.com</a>
-        </div>
-        <a href="tel:+19544456186" class="btn call-cta"><i class="fa-solid fa-phone-volume"></i> Call the SE Yard</a>
-      </div>
+      <a href="tel:+19544456186" class="btn"><i class="fa-solid fa-phone-volume"></i> Call the SE Yard</a>
     </div>
-    <div class="area-card">
-      <div class="top">
-        <div>
-          <span class="zone">Southwest Yard</span>
-          <h3>Gulf Coast</h3>
-        </div>
-        <span class="reg"><i class="fa-solid fa-sun"></i></span>
+    <div class="area-half">
+      <span class="zone">Southwest Yard &middot; Gulf Coast</span>
+      <h3>Fort Myers to Charlotte</h3>
+      <div class="counties"><span class="county">Lee</span><span class="county">Collier</span><span class="county">Charlotte</span></div>
+      <div class="lines">
+        <a href="tel:+12392553920" class="area-link"><i class="fa-solid fa-phone-volume"></i> (239) 255-3920</a>
+        <a href="mailto:Coopercranefm@gmail.com" class="area-link"><i class="fa-solid fa-envelope"></i> Coopercranefm@gmail.com</a>
       </div>
-      <div class="body">
-        <div class="counties">
-          <span class="county">Lee</span>
-          <span class="county">Collier</span>
-          <span class="county">Charlotte</span>
-        </div>
-        <div class="contact-row">
-          <a href="tel:+12392553920" class="area-link"><i class="fa-solid fa-phone-volume"></i> (239) 255-3920</a>
-          <a href="mailto:Coopercranefm@gmail.com" class="area-link"><i class="fa-solid fa-envelope"></i> Coopercranefm@gmail.com</a>
-        </div>
-        <a href="tel:+12392553920" class="btn call-cta"><i class="fa-solid fa-phone-volume"></i> Call the SW Yard</a>
-      </div>
+      <a href="tel:+12392553920" class="btn"><i class="fa-solid fa-phone-volume"></i> Call the SW Yard</a>
     </div>
   </div>
 </section>
@@ -951,30 +669,10 @@
 <!-- ===== PROOF ===== -->
 <section class="proof" id="proof">
   <div class="proof-inner">
-    <div class="proof-head">
-      <span class="eyebrow">In their words</span>
-      <h2 class="headline">Lifts That Went Right</h2>
-    </div>
-    <div class="proof-grid">
-      <div class="proof-feature">
-        <span class="proof-ph-note">Placeholder review - replace with a real customer quote</span>
-        <i class="fa-solid fa-quote-left quote-ico"></i>
-        <blockquote>Add a real Cooper Crane review here, ideally about a tricky lift the crew made look easy. Pull the best one from Facebook or ask a repeat contractor for a line.</blockquote>
-        <cite><b>[ Customer Name ]</b><span>[ Job type, City ]</span></cite>
-      </div>
-      <div class="proof-col">
-        <div class="proof-small">
-          <span class="proof-ph-note">Placeholder</span>
-          <blockquote>Short second testimonial. A homeowner AC-unit lift or roofing job reads well here.</blockquote>
-          <cite><b>[ Customer Name ]</b><span>[ City ]</span></cite>
-        </div>
-        <div class="proof-small">
-          <span class="proof-ph-note">Placeholder</span>
-          <blockquote>A third quote from a builder or roofer about scheduling and reliability.</blockquote>
-          <cite><b>[ Customer Name ]</b><span>[ Trade, City ]</span></cite>
-        </div>
-      </div>
-    </div>
+    <i class="fa-solid fa-quote-left qmark"></i>
+    <blockquote>Add a real Cooper Crane review here, ideally about a tricky lift the crew made look easy. Pull the best one from Facebook or ask a repeat contractor for a line.</blockquote>
+    <cite><b>[ Customer Name ]</b><span>[ Job type, City ]</span></cite>
+    <div class="proof-note">Placeholder &middot; swap in a real customer quote before launch</div>
   </div>
 </section>
 
@@ -982,48 +680,21 @@
 <section class="faq" id="faq">
   <div class="faq-inner">
     <div class="faq-intro">
-      <span class="eyebrow">Good to know</span>
+      <span class="kicker">Good to Know</span>
       <h2 class="headline">Crane Rental, Answered</h2>
       <p>The questions we hear most before a lift. Still unsure what you need? A two-minute call sorts it out.</p>
       <a href="#contact" class="btn"><i class="fa-solid fa-clipboard-check"></i> Request a Quote</a>
     </div>
     <div class="accordion" id="accordion">
-      <div class="acc-item">
-        <button class="acc-header" aria-expanded="false">What size cranes do you have? <i class="fa-solid fa-chevron-down"></i></button>
-        <div class="acc-content"><div class="acc-text">The fleet runs from a 2-ton mini spider crane that fits through a standard gate up to a 40-ton mobile crane, with 17-ton and 35-ton machines in between, plus boom trucks and accessories.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-header" aria-expanded="false">Which areas do you cover? <i class="fa-solid fa-chevron-down"></i></button>
-        <div class="acc-content"><div class="acc-text">Two yards cover six counties. The Southeast yard serves Broward, Miami-Dade and Palm Beach. The Southwest yard serves Lee, Collier and Charlotte.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-header" aria-expanded="false">Are your operators certified? <i class="fa-solid fa-chevron-down"></i></button>
-        <div class="acc-content"><div class="acc-text">Yes. Every crane comes with a certified, experienced Cooper Crane operator who handles the rigging and signaling and treats your site and crew with courtesy and respect.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-header" aria-expanded="false">How do I know what size crane I need? <i class="fa-solid fa-chevron-down"></i></button>
-        <div class="acc-content"><div class="acc-text">Tell us three things: how heavy the load is, how high it has to go and how far the crane has to reach, plus any access limits. We will spec the right machine. If you are not sure, a quick call sorts it out.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-header" aria-expanded="false">How far ahead should I book? <i class="fa-solid fa-chevron-down"></i></button>
-        <div class="acc-content"><div class="acc-text">Earlier is better for scheduling, but we keep multiple machines at each yard and will always try to work in urgent and same-week lifts. Call the yard nearest your job and we will find a slot.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-header" aria-expanded="false">Do you provide the operator, or just the crane? <i class="fa-solid fa-chevron-down"></i></button>
-        <div class="acc-content"><div class="acc-text">Every crane is run by a Cooper Crane operator. We bring the machine and run it; you point at what needs to move. No separate operator to hire.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-header" aria-expanded="false">What kinds of jobs do you handle? <i class="fa-solid fa-chevron-down"></i></button>
-        <div class="acc-content"><div class="acc-text">Common lifts include rooftop AC units, roof trusses, roofing material, generators and pest-control tarps, plus plenty of custom one-off lifts like trees, steel, signage and hot tubs.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-header" aria-expanded="false">How do you take payment? <i class="fa-solid fa-chevron-down"></i></button>
-        <div class="acc-content"><div class="acc-text">We invoice through QuickBooks and accept credit card, Cash App and Zelle.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-header" aria-expanded="false">Which number do I call? <i class="fa-solid fa-chevron-down"></i></button>
-        <div class="acc-content"><div class="acc-text">For Broward, Miami-Dade and Palm Beach call the Southeast yard at (954) 445-6186. For Lee, Collier and Charlotte call the Southwest yard at (239) 255-3920.</div></div>
-      </div>
+      <div class="acc-item"><button class="acc-header" aria-expanded="false">What size cranes do you have? <i class="fa-solid fa-chevron-down"></i></button><div class="acc-content"><div class="acc-text">The fleet runs from a 2-ton mini spider crane that fits through a standard gate up to a 40-ton mobile crane, with 17-ton and 35-ton machines in between, plus boom trucks and accessories.</div></div></div>
+      <div class="acc-item"><button class="acc-header" aria-expanded="false">Which areas do you cover? <i class="fa-solid fa-chevron-down"></i></button><div class="acc-content"><div class="acc-text">Two yards cover six counties. The Southeast yard serves Broward, Miami-Dade and Palm Beach. The Southwest yard serves Lee, Collier and Charlotte.</div></div></div>
+      <div class="acc-item"><button class="acc-header" aria-expanded="false">Are your operators certified? <i class="fa-solid fa-chevron-down"></i></button><div class="acc-content"><div class="acc-text">Yes. Every crane comes with a certified, experienced Cooper Crane operator who handles the rigging and signaling and treats your site and crew with courtesy and respect.</div></div></div>
+      <div class="acc-item"><button class="acc-header" aria-expanded="false">How do I know what size crane I need? <i class="fa-solid fa-chevron-down"></i></button><div class="acc-content"><div class="acc-text">Tell us three things: how heavy the load is, how high it has to go and how far the crane has to reach, plus any access limits. We will spec the right machine. If you are not sure, a quick call sorts it out.</div></div></div>
+      <div class="acc-item"><button class="acc-header" aria-expanded="false">How far ahead should I book? <i class="fa-solid fa-chevron-down"></i></button><div class="acc-content"><div class="acc-text">Earlier is better for scheduling, but we keep multiple machines at each yard and will always try to work in urgent and same-week lifts. Call the yard nearest your job and we will find a slot.</div></div></div>
+      <div class="acc-item"><button class="acc-header" aria-expanded="false">Do you provide the operator, or just the crane? <i class="fa-solid fa-chevron-down"></i></button><div class="acc-content"><div class="acc-text">Every crane is run by a Cooper Crane operator. We bring the machine and run it; you point at what needs to move. No separate operator to hire.</div></div></div>
+      <div class="acc-item"><button class="acc-header" aria-expanded="false">What kinds of jobs do you handle? <i class="fa-solid fa-chevron-down"></i></button><div class="acc-content"><div class="acc-text">Common lifts include rooftop AC units, roof trusses, roofing material, generators and pest-control tarps, plus plenty of custom one-off lifts like trees, steel, signage and hot tubs.</div></div></div>
+      <div class="acc-item"><button class="acc-header" aria-expanded="false">How do you take payment? <i class="fa-solid fa-chevron-down"></i></button><div class="acc-content"><div class="acc-text">We invoice through QuickBooks and accept credit card, Cash App and Zelle.</div></div></div>
+      <div class="acc-item"><button class="acc-header" aria-expanded="false">Which number do I call? <i class="fa-solid fa-chevron-down"></i></button><div class="acc-content"><div class="acc-text">For Broward, Miami-Dade and Palm Beach call the Southeast yard at (954) 445-6186. For Lee, Collier and Charlotte call the Southwest yard at (239) 255-3920.</div></div></div>
     </div>
   </div>
 </section>
@@ -1032,7 +703,7 @@
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="contact-card">
-      <span class="eyebrow">Request a quote</span>
+      <span class="kicker">Request a Quote</span>
       <h2 class="headline">Tell Us About Your Lift</h2>
       <p class="lede">Send the basics and the right yard will get back to you. Need it today? Calling is fastest.</p>
       <form class="contact-form" id="quoteForm" novalidate>
@@ -1113,8 +784,8 @@
     <div class="footer-col">
       <h4>Explore</h4>
       <ul>
-        <li><a href="#lift">What We Lift</a></li>
         <li><a href="#fleet">The Fleet</a></li>
+        <li><a href="#lift">What We Lift</a></li>
         <li><a href="#why">Why Cooper</a></li>
         <li><a href="#area">Service Area</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -1146,7 +817,6 @@
 </footer>
 
 <script>
-// Force native scroll restoration (Brave/Safari sometimes default to 'manual').
 if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
 
 (function () {
@@ -1158,14 +828,12 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
   function openDrawer() {
     drawer.classList.add('open'); overlay.classList.add('open');
     document.body.classList.add('drawer-open');
-    drawer.setAttribute('aria-hidden', 'false');
-    hamburger.setAttribute('aria-expanded', 'true');
+    drawer.setAttribute('aria-hidden', 'false'); hamburger.setAttribute('aria-expanded', 'true');
   }
   function closeDrawer() {
     drawer.classList.remove('open'); overlay.classList.remove('open');
     document.body.classList.remove('drawer-open');
-    drawer.setAttribute('aria-hidden', 'true');
-    hamburger.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true'); hamburger.setAttribute('aria-expanded', 'false');
   }
   hamburger.addEventListener('click', openDrawer);
   drawerClose.addEventListener('click', closeDrawer);
@@ -1173,7 +841,7 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer(); });
 
-  // ===== Anchor smooth-scroll with no hash persistence =====
+  // ===== Anchor smooth-scroll, no hash persistence =====
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       const id = link.getAttribute('href');
@@ -1185,19 +853,14 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
       history.replaceState(null, '', window.location.pathname);
     });
   });
-  // Strip any hash on initial load so refresh lands at top.
   if (window.location.hash) { history.replaceState(null, '', window.location.pathname); }
 
-  // ===== FAQ accordion (single-open, max-height) =====
+  // ===== FAQ accordion (single-open) =====
   document.querySelectorAll('.acc-header').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.parentElement;
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.acc-item').forEach(i => {
-        i.classList.remove('open');
-        const b = i.querySelector('.acc-header');
-        if (b) b.setAttribute('aria-expanded', 'false');
-      });
+      document.querySelectorAll('.acc-item').forEach(i => { i.classList.remove('open'); const b = i.querySelector('.acc-header'); if (b) b.setAttribute('aria-expanded', 'false'); });
       if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
     });
   });
@@ -1219,33 +882,23 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
     const msg = form.message.value.trim();
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     let firstBad = null;
-    const checks = [
-      ['cf-name', !name],
-      ['cf-phone', !phone],
-      ['cf-email', !email || !emailOk],
-      ['cf-loc', !loc]
-    ];
+    const checks = [['cf-name', !name], ['cf-phone', !phone], ['cf-email', !email || !emailOk], ['cf-loc', !loc]];
     checks.forEach(([id, bad]) => {
       const group = document.getElementById(id).closest('.form-group');
       setInvalid(group, bad);
       if (bad && !firstBad) firstBad = document.getElementById(id);
     });
     if (firstBad) { firstBad.focus(); return; }
-
-    // Route to the correct yard inbox based on selected area.
     const to = loc.indexOf('Southwest') === 0 ? 'Coopercranefm@gmail.com' : 'Coopercranefl@gmail.com';
     const subject = encodeURIComponent('Crane quote request: ' + name);
-    const body = encodeURIComponent(
-      'Name/business: ' + name + '\nPhone: ' + phone + '\nEmail: ' + email +
-      '\nClosest yard: ' + loc + '\n\nWhat needs lifting:\n' + (msg || '(not provided)')
-    );
+    const body = encodeURIComponent('Name/business: ' + name + '\nPhone: ' + phone + '\nEmail: ' + email + '\nClosest yard: ' + loc + '\n\nWhat needs lifting:\n' + (msg || '(not provided)'));
     window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
     status.className = 'form-status show success';
-    status.innerHTML = "Thanks. Your email just opened with the details filled in. If nothing happened, call us at <a href='tel:+19544456186' style='color:var(--red-hot);font-weight:600;'>(954) 445-6186</a>.";
+    status.innerHTML = "Thanks. Your email just opened with the details filled in. If nothing happened, call us at <a href='tel:+19544456186' style='color:var(--orange-hot);font-weight:600;'>(954) 445-6186</a>.";
   });
 })();
 </script>
 
 </body>
 </html>
-                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

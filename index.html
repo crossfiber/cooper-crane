@@ -261,7 +261,6 @@
   section.dark { background: var(--steel); color: var(--bone); }
   .sec-head { max-width: 760px; margin-bottom: 46px; }
   .sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
-  .kicker { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
   .headline { font-size: clamp(2.2rem, 4.6vw, 3.7rem); color: var(--ink); line-height: 1; }
   section.dark .headline { color: var(--bone); }
   .sec-head p { margin-top: 14px; font-size: 1.08rem; line-height: 1.62; color: var(--ink-soft); }
@@ -285,16 +284,18 @@
   .fleet-foot p { margin: 0; font-size: 1.02rem; color: var(--bone-mute); max-width: 560px; line-height: 1.5; }
   .fleet-foot p strong { color: var(--bone); font-weight: 600; }
 
-  /* ===== WHAT WE LIFT (capability rows, not card grid) ===== */
+  /* ===== WHAT WE LIFT (service cards) ===== */
   .lift { background: var(--concrete-alt); }
-  .lift-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 56px; align-items: start; }
-  .lift-intro .headline { margin-bottom: 16px; }
-  .lift-intro p { color: var(--ink-soft); font-size: 1.06rem; line-height: 1.65; margin-bottom: 24px; max-width: 380px; }
-  .lift-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
-  .lift-row { display: flex; gap: 18px; align-items: flex-start; padding: 22px 0; border-top: 1px solid var(--line); }
-  .lift-row .ico { width: 44px; height: 44px; flex-shrink: 0; color: var(--orange); font-size: 1.5rem; display: inline-flex; align-items: center; justify-content: flex-start; }
-  .lift-row h3 { font-size: 1.4rem; color: var(--ink); margin-bottom: 4px; }
-  .lift-row p { font-size: 0.94rem; color: var(--ink-soft); line-height: 1.5; margin: 0; }
+  .lift-head { max-width: 1180px; margin: 0 auto 42px; display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; }
+  .lift-head .headline { max-width: 680px; }
+  .lift-head .dek { max-width: 460px; color: var(--ink-soft); font-size: 1.06rem; line-height: 1.6; margin-top: 14px; }
+  .lift-head .btn { flex-shrink: 0; }
+  .lift-grid { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .lift-card { display: flex; gap: 20px; align-items: flex-start; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 26px 28px; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+  .lift-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(194,93,28,0.45); }
+  .lift-card .ico { width: 52px; height: 52px; border-radius: 12px; background: var(--orange); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 1.45rem; flex-shrink: 0; box-shadow: 0 6px 16px rgba(194,93,28,0.26); }
+  .lift-card h3 { font-size: 1.5rem; color: var(--ink); margin-bottom: 5px; line-height: 1; }
+  .lift-card p { font-size: 0.96rem; color: var(--ink-soft); line-height: 1.55; margin: 0; }
 
   /* ===== WHY COOPER (image left, text right, no badge overlap) ===== */
   .why { background: var(--steel); color: var(--bone); }
@@ -310,16 +311,6 @@
   .why-points .ico { color: var(--orange); font-size: 1.35rem; margin-top: 2px; flex-shrink: 0; width: 26px; text-align: center; }
   .why-points b { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--bone); display: block; letter-spacing: 0.02em; line-height: 1.1; }
   .why-points span { font-size: 0.95rem; color: var(--bone-mute); }
-
-  /* ===== ON THE JOB (full-bleed image band) ===== */
-  .work { padding: 0; }
-  .band { position: relative; min-height: 480px; display: flex; align-items: flex-end; overflow: hidden; }
-  .band > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .band::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,10,10,0.94) 0%, rgba(10,10,10,0.62) 48%, rgba(10,10,10,0.22) 100%); }
-  .band-cap { position: relative; z-index: 1; width: 100%; max-width: 1220px; margin: 0 auto; padding: 64px 30px; color: var(--bone); }
-  .band-cap .kicker { color: var(--orange); }
-  .band-cap .headline { color: var(--bone); max-width: 640px; }
-  .band-cap p { color: var(--bone-mute); max-width: 520px; margin: 14px 0 22px; font-size: 1.06rem; line-height: 1.6; }
 
   /* ===== SERVICE AREA (single split panel, center divider) ===== */
   .area { background: var(--concrete-alt); }
@@ -364,7 +355,6 @@
   .contact { background: var(--concrete-alt); }
   .contact-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 50px; align-items: start; }
   .contact-card { background: #fff; color: var(--ink); border-radius: 8px; padding: 38px 36px; box-shadow: var(--shadow-md); }
-  .contact-card .kicker { margin-bottom: 6px; }
   .contact-card .headline { color: var(--ink); font-size: clamp(1.9rem, 3vw, 2.5rem); margin-bottom: 10px; }
   .contact-card .lede { color: var(--ink-soft); font-size: 1rem; line-height: 1.55; margin-bottom: 24px; }
   .contact-form { display: flex; flex-direction: column; gap: 14px; }
@@ -425,8 +415,8 @@
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 1024px) {
-    .lift-inner { grid-template-columns: 1fr; gap: 34px; }
-    .lift-intro p { max-width: 560px; }
+    .lift-head { display: block; }
+    .lift-head .btn { margin-top: 18px; }
     .why-inner { grid-template-columns: 1fr; gap: 30px; }
     .why-photo { aspect-ratio: 16/10; max-height: 380px; order: -1; }
     .faq-inner { grid-template-columns: 1fr; gap: 28px; }
@@ -462,13 +452,10 @@
     .fleet-foot { padding: 22px; }
     .fleet-foot .btn { width: 100%; }
 
-    .lift-rows { grid-template-columns: 1fr; gap: 0; }
-    .lift-row { padding: 18px 0; }
+    .lift-grid { grid-template-columns: 1fr; }
+    .lift-card { padding: 22px 22px; }
 
     .why-points b { font-size: 1.12rem; }
-
-    .band { min-height: 360px; }
-    .band-cap { padding: 42px 20px; }
 
     .area-panel { grid-template-columns: 1fr; }
     .area-half { padding: 28px 24px; }
@@ -571,7 +558,6 @@
 <!-- ===== FLEET LADDER (signature) ===== -->
 <section class="fleet" id="fleet">
   <div class="sec-head center">
-    <span class="kicker">The Fleet</span>
     <h2 class="headline">One Phone Call Covers 2 to 40 Tons</h2>
     <p>Pick the rated capacity your job needs. Every machine below is in active rotation, tagged with the yard that stocks it.</p>
   </div>
@@ -605,21 +591,20 @@
 
 <!-- ===== WHAT WE LIFT ===== -->
 <section class="lift" id="lift">
-  <div class="lift-inner">
-    <div class="lift-intro">
-      <span class="kicker">What We Lift</span>
-      <h2 class="headline">If It Needs to Go Up, Over or Down</h2>
-      <p>Most of our days are spent setting the heavy, awkward things that won't fit through a door or up a ladder.</p>
-      <a href="#contact" class="btn"><i class="fa-solid fa-clipboard-check"></i> Tell Us Your Lift</a>
+  <div class="lift-head">
+    <div>
+      <h2 class="headline">If It Needs to Go Up, Over or Down, We Lift It</h2>
+      <p class="dek">Most of our days are spent setting the heavy, awkward things that won't fit through a door or up a ladder.</p>
     </div>
-    <div class="lift-rows">
-      <div class="lift-row"><span class="ico"><i class="fa-solid fa-snowflake"></i></span><div><h3>AC Units</h3><p>Rooftop condensers and air handlers set clean onto curbs and pads.</p></div></div>
-      <div class="lift-row"><span class="ico"><i class="fa-solid fa-tents"></i></span><div><h3>Pest-Control Tarps</h3><p>Fumigation tenting lifted up and over the roofline for tarping crews.</p></div></div>
-      <div class="lift-row"><span class="ico"><i class="fa-solid fa-grip-lines"></i></span><div><h3>Trusses</h3><p>Roof and floor trusses flown into place to keep framing on schedule.</p></div></div>
-      <div class="lift-row"><span class="ico"><i class="fa-solid fa-house-chimney"></i></span><div><h3>Roofing</h3><p>Tile, shingle bundles and dry-in material hoisted straight to the deck.</p></div></div>
-      <div class="lift-row"><span class="ico"><i class="fa-solid fa-plug-circle-bolt"></i></span><div><h3>Generators</h3><p>Standby and portable generators placed onto pads and rooftops.</p></div></div>
-      <div class="lift-row"><span class="ico"><i class="fa-solid fa-arrows-up-to-line"></i></span><div><h3>And Much More</h3><p>Trees, steel, signage, hot tubs. If you can rig it, we can lift it.</p></div></div>
-    </div>
+    <a href="#contact" class="btn"><i class="fa-solid fa-clipboard-check"></i> Tell Us Your Lift</a>
+  </div>
+  <div class="lift-grid">
+    <div class="lift-card"><span class="ico"><i class="fa-solid fa-snowflake"></i></span><div><h3>AC Units</h3><p>Rooftop condensers and air handlers set clean onto curbs and pads, residential to commercial.</p></div></div>
+    <div class="lift-card"><span class="ico"><i class="fa-solid fa-tents"></i></span><div><h3>Pest-Control Tarps</h3><p>Fumigation tenting lifted up and over the roofline so tarping crews can work fast and safe.</p></div></div>
+    <div class="lift-card"><span class="ico"><i class="fa-solid fa-grip-lines"></i></span><div><h3>Trusses</h3><p>Roof and floor trusses flown into place to keep your framing crew on schedule.</p></div></div>
+    <div class="lift-card"><span class="ico"><i class="fa-solid fa-house-chimney"></i></span><div><h3>Roofing</h3><p>Tile, shingle bundles and dry-in material hoisted straight to the deck, not up a ladder.</p></div></div>
+    <div class="lift-card"><span class="ico"><i class="fa-solid fa-plug-circle-bolt"></i></span><div><h3>Generators</h3><p>Standby and portable generators set onto pads and rooftops without the wrestling match.</p></div></div>
+    <div class="lift-card"><span class="ico"><i class="fa-solid fa-arrows-up-to-line"></i></span><div><h3>And Much More</h3><p>Trees, steel, signage, hot tubs, equipment swaps. If you can rig it, we can lift it.</p></div></div>
   </div>
 </section>
 
@@ -630,7 +615,6 @@
       <img src="assets/cc-spider-indoor.jpg" alt="A Cooper Crane mini spider crane working inside a glass atrium on an indoor glass installation in South Florida" loading="lazy">
     </div>
     <div class="why-text">
-      <span class="kicker">Why Cooper Crane</span>
       <h2 class="headline">Local Iron, Certified Hands</h2>
       <p>Cooper Crane is a <strong>two-yard South Florida operation</strong>, not a national call center. The same people who answer the phone run the machines, so the crew that shows up already knows your job.</p>
       <ul class="why-points">
@@ -643,23 +627,9 @@
   </div>
 </section>
 
-<!-- ===== ON THE JOB ===== -->
-<section class="work" id="work">
-  <div class="band">
-    <img src="assets/cc-rooftop-lift.jpg" alt="A Cooper Crane boom truck lifting a pallet of materials onto a South Florida oceanfront rooftop at sunset, operator working from the basket" loading="lazy">
-    <div class="band-cap">
-      <span class="kicker">On the Job</span>
-      <h2 class="headline">Branded Iron, All Over South Florida</h2>
-      <p>From a mini spider crane threading a glass atrium to a 40-ton boom truck reaching over a rooftop, a certified Cooper Crane operator runs every lift.</p>
-      <a href="#contact" class="btn"><i class="fa-solid fa-clipboard-check"></i> Request a Quote</a>
-    </div>
-  </div>
-</section>
-
 <!-- ===== SERVICE AREA ===== -->
 <section class="area" id="area">
   <div class="sec-head center">
-    <span class="kicker">Service Area</span>
     <h2 class="headline">Pick the Yard Nearest Your Job</h2>
     <p>Two yards mean a machine is never far from your site. Call the coast you are on.</p>
   </div>
@@ -701,7 +671,6 @@
 <section class="faq" id="faq">
   <div class="faq-inner">
     <div class="faq-intro">
-      <span class="kicker">Good to Know</span>
       <h2 class="headline">Crane Rental, Answered</h2>
       <p>The questions we hear most before a lift. Still unsure what you need? A two-minute call sorts it out.</p>
       <a href="#contact" class="btn"><i class="fa-solid fa-clipboard-check"></i> Request a Quote</a>
@@ -724,7 +693,6 @@
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="contact-card">
-      <span class="kicker">Request a Quote</span>
       <h2 class="headline">Tell Us About Your Lift</h2>
       <p class="lede">Send the basics and the right yard will get back to you. Need it today? Calling is fastest.</p>
       <form class="contact-form" id="quoteForm" novalidate>
@@ -922,4 +890,4 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
 
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

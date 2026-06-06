@@ -429,7 +429,7 @@
 
   /* ===== FOOTER ===== */
   footer { background: var(--steel-deep); color: var(--bone-mute); padding: 62px 30px 26px; }
-  .footer-inner { max-width: 1220px; margin: 0 auto 34px; display: grid; grid-template-columns: 2fr 1fr 1.3fr; gap: 46px; }
+  .footer-inner { max-width: 1220px; margin: 0 auto 34px; display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 40px; }
   .footer-brand .wm { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; color: var(--bone); letter-spacing: 0.03em; text-transform: uppercase; }
   .footer-brand .wm b { color: var(--orange); }
   .footer-brand .tag { font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--bone-mute); margin: 4px 0 16px; font-weight: 600; }
@@ -444,9 +444,6 @@
   .footer-col address a { display: inline-flex; align-items: center; gap: 9px; }
   .footer-col address i { color: var(--orange); width: 16px; text-align: center; }
   .footer-bottom { max-width: 1220px; margin: 0 auto; border-top: 1px solid var(--line-dark); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; font-size: 0.82rem; }
-  .footer-bottom .links { display: flex; gap: 18px; flex-wrap: wrap; }
-  .footer-bottom .links a { color: var(--bone-mute); text-decoration: none; }
-  .footer-bottom .links a:hover { color: var(--orange); }
   .built-by { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--bone-mute); opacity: 0.82; transition: opacity 0.2s ease; }
   .built-by:hover { opacity: 1; }
   .built-by span { font-size: 0.78rem; letter-spacing: 0.04em; }
@@ -533,9 +530,10 @@
 
     /* Footer condensed: brand full width, link cols paired */
     footer { padding: 42px 20px 22px; }
-    .footer-inner { grid-template-columns: 1fr 1fr; gap: 22px 20px; margin-bottom: 22px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 24px 20px; margin-bottom: 22px; }
     .footer-brand { grid-column: 1 / -1; }
     .footer-brand p { margin-bottom: 12px; }
+    .footer-contact { grid-column: 1 / -1; }
     .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
   }
 
@@ -893,18 +891,22 @@
         <li><a href="#fleet">The Fleet</a></li>
         <li><a href="#lift">What We Lift</a></li>
         <li><a href="#why">Why Cooper</a></li>
-        <li><a href="#area">Service Area</a></li>
-        <li><a href="crane-rental-broward/">Crane Rental in Broward</a></li>
-        <li><a href="crane-rental-fort-myers/">Crane Rental in Fort Myers</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Request a Quote</a></li>
       </ul>
     </div>
     <div class="footer-col">
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="crane-rental-broward/">Broward &amp; Palm Beach</a></li>
+        <li><a href="crane-rental-fort-myers/">Fort Myers &amp; Naples</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-contact">
       <h4>Two Yards</h4>
       <address>
-        <a href="tel:+19544456186"><i class="fa-solid fa-phone-volume"></i> (954) 445-6186 &middot; Southeast</a>
-        <a href="tel:+12392553920"><i class="fa-solid fa-phone-volume"></i> (239) 255-3920 &middot; Southwest</a>
+        <a href="tel:+19544456186"><i class="fa-solid fa-phone-volume"></i> (954) 445-6186 &middot; SE</a>
+        <a href="tel:+12392553920"><i class="fa-solid fa-phone-volume"></i> (239) 255-3920 &middot; SW</a>
         <a href="mailto:Coopercranefl@gmail.com"><i class="fa-solid fa-envelope"></i> Coopercranefl@gmail.com</a>
         <a href="mailto:Coopercranefm@gmail.com"><i class="fa-solid fa-envelope"></i> Coopercranefm@gmail.com</a>
       </address>
@@ -912,11 +914,6 @@
   </div>
   <div class="footer-bottom">
     <span>&copy; 2026 Cooper Crane LLC. All rights reserved.</span>
-    <div class="links">
-      <a href="#lift">Services</a>
-      <a href="#area">Service Area</a>
-      <a href="#contact">Contact</a>
-    </div>
     <a class="built-by" href="https://crossdesigned.com" target="_blank" rel="noopener" aria-label="Website built by Cross Designs">
       <span>Built by</span>
       <img src="assets/cross-designs.png" alt="Cross Designs">
